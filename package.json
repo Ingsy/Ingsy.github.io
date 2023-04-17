@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix"
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
   "homepage": "https://github.com/Ingsy/Semester-Project2#readme",
   "devDependencies": {
     "eslint": "^8.38.0",
-    "prettier": "^2.8.7"
+    "live-server": "^1.2.2",
+    "prettier": "^2.8.7",
+    "sass": "^1.62.0"
   },
   "dependencies": {
     "bootstrap": "^5.2.0"
