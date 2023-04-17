@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Ingsy/Semester-Project2#readme",
   "devDependencies": {
+    "eslint": "^8.38.0",
     "prettier": "^2.8.7"
   }
 }
