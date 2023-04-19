@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Ingsy/Semester-Project2#readme",
   "devDependencies": {
+    "dist-css": "^0.2.0",
     "eslint": "^8.38.0",
     "live-server": "^1.2.2",
     "prettier": "^2.8.7",
