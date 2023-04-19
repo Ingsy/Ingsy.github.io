@@ -1,0 +1,22 @@
+.card {
+    background-color: #eaf4f5;
+    border-radius: 30px 80px;
+    margin: 20px;
+    border-color: none;
+    max-width: 400px;
+    padding: 15px;
+  }
+  
+  .card2 {
+    border-radius: none;
+  }
+  
+  .card-div {
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  .card-div2 {
+    justify-content: space-evenly;
+    display: flex;
+  }
