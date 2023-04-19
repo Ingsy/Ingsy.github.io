@@ -68,24 +68,114 @@
       <button class="btn btn-4">BID</button>
       <div class="container">
         <div class="row">
-          <div class="col-sm-1 col-md-6 col-lg-6"></div>
-          <div class="card text-center">
-            <img src="./img/testphot.jpg" class="card-img-bid" alt="..." />
-            <div class="card-body">
-              <div class="card-div">
-                <h5 class="card-title text-start">Listing title</h5>
-                <h5 class="card-text">Credit: 50</h5>
+          <div class="col-md-6 col-lg-6">
+            <div class="card text-center">
+              <img src="./img/testphot.jpg" class="card-img-bid" alt="..." />
+              <div class="card-body">
+                <div class="card-div">
+                  <h5 class="card-title text-start">Listing title</h5>
+                  <h5 class="card-text">Credit: 50</h5>
+                </div>
+                <hr class="mt-1 mb-2" />
+                <p class="card-text text-start">
+                  listing description somthing something something
+                </p>
+                <hr class="mt-1 mb-2" />
+                <button class="btn btn-3 mt-2">BID</button>
               </div>
-              <hr class="mt-1 mb-2" />
-              <p class="card-text text-start">
-                listing description somthing something something
-              </p>
-              <hr class="mt-1 mb-2" />
-              <button class="btn btn-3 mt-2">BID</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="card text-center">
+              <img src="./img/testphot.jpg" class="card-img-bid" alt="..." />
+              <div class="card-body">
+                <div class="card-div">
+                  <h5 class="card-title text-start">Listing title</h5>
+                  <h5 class="card-text">Credit: 50</h5>
+                </div>
+                <hr class="mt-1 mb-2" />
+                <p>
+                  <button
+                    class="btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsedescription"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    href="collapsetext"
+                  >
+                    <i class="fa-solid fa fa-info"></i>
+                    description
+                  </button>
+                  <div class="collapse" id="collapsedescription">
+                    <div class="card2 card-body">
+                      <p class="card-text text-start">item description</p>
+                    </div>
+                  </div>
+                  <p>
+                    <button
+                      class="btn"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapsebids"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                      href="collapsetext"
+                    >
+                    <i class="fa-solid fa fa-coins"></i>
+                      bid`s
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapsebids">
+                    <div class="card2 card-body">
+                      <div class="card-div2">
+                        <h3 class="card-text">date</h3>
+                        <h3 class="card-text">Credit: 30</h3>
+                      </div>
+                      <hr class="m-3" />
+                      <div class="card-div2">
+                        <h3 class="card-text">date</h3>
+                        <h3 class="card-text">Credit: 35</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsedate"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    href="collapsetext"
+                  >
+                  <i class="fa-solid fa fa-gavel"></i>
+                    Auction ends
+                  </button>
+                </p>
+                <div class="collapse" id="collapsedate">
+                  <div class="card2 card-body">
+                    <p class="card-text text-start">Auction ends: date</p>
+                  </div>
+                </div>
+               
+                <hr class="mt-2" />
+
+               
+                <button class="btn btn-3">BID</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b0782a38e3.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
