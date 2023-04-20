@@ -21,70 +21,139 @@
   background-color: #eaf4f5;
 }
 
-.btn-1 {
-  border-radius: 5px 15px;
-  color: #fff;
-  background-color: #44c1c5;
-  border-color: #fcd029;
-  border-width: 2px;
-}
+/* Buttons*/
 
 .btn-2 {
-  border-radius: 5px 15px;
+  border-radius: 0px 30px;
   color: #000000;
-  background-color: #44c1c5;
-  border-color: #fcd029;
   border-width: 2px;
-  width: 100px;
-  font-weight: bolder;
-}
-.btn-3 {
-  border-radius: 5px 15px;
-  color: #000000;
-  background-color: #fcd029;
-  border-color: #44c1c5;
-  border-width: 2px;
-  width: 200px;
+  padding: 10px;
   font-weight: bolder;
 }
 
-.btn-4 {
-  border-radius: 5px 15px;
-  color: #000000;
-  background-color: #44c1c5;
-  width: 130px;
-  font-weight: bolder;
-}
-
-.input {
-  border-radius: 5px 15px;
-  width: 200px;
-}
-
-.inputForm {
-  border-radius: 5px 15px;
+.w3 {
   width: 300px;
 }
 
-.card-img-bid {
-  border-radius: 30px 80px;
-  max-width: 300px;
-  max-height: 400px;
-  padding: 10px;
+.w25 {
+  width: 250px;
 }
+
+.w2 {
+  width: 200px;
+}
+
+.btn-yellow {
+  background-color: #fcd029;
+  border-color: #44c1c5;
+}
+
+.btn-turq {
+  background-color: #44c1c5;
+  border-color: #fcd029;
+}
+
+.btn-black {
+  color: #000000;
+}
+
+.card-img-bid {
+  border-radius: 0px 80px;
+  max-width: auto;
+  max-height: 400px;
+  padding-top: 20px;
+}
+
+.card-img-profile {
+  border-radius: 0px 80px;
+  max-width: auto;
+  max-height: 200px;
+  padding-top: 20px;
+}
+
+/* Typography*/
 
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-style: italic;
 }
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+}
+
+/*colors*/
+
+/*CARDS*/
+
 .card {
   background-color: #eaf4f5;
-  border-radius: 30px 80px;
+  border-radius: 0px 80px;
   margin: 20px;
   border-color: none;
   max-width: 400px;
-  padding: 15px;
+  min-height: 450px;
+}
+
+.inputForm {
+  border-radius: 0px 30px;
+  min-width: 250px;
+  height: 50px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  border-color: #44c1c5;
+}
+
+.inputForm-2 {
+  border-radius: 0px 30px;
+  max-width: 300px;
+  height: 50px;
+  border-color: #fcd029;
+}
+
+.input {
+  border-radius: 5px 15px;
+  max-width: 200px;
+}
+
+/*colors*/
+
+.btn-yellow {
+  background-color: #fcd029;
+  border-color: #44c1c5;
+}
+
+.btn-turq {
+  background-color: #44c1c5;
+  border-color: #fcd029;
+}
+
+.turq {
+  background-color: #44c1c5;
+}
+
+.yellow-2 {
+  background-color: #fcd029;
+}
+
+.navbar-color {
+  background-color: #eaf4f5;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.yellow {
+  color: #fcd029;
+  border: solid;
+}
+
+.turq-2 {
+  color: #44c1c5;
+  border: solid;
 }
 
 .card2 {

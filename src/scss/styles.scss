@@ -1,5 +1,5 @@
 @import "components/variables";
-@import "/node_modules/bootstrap/scss/bootstrap";
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
 @import "/node_modules/bootstrap/scss/functions";
 @import "/node_modules/bootstrap/scss/bootstrap-grid.scss";
 @import "/node_modules/bootstrap/scss/variables";
@@ -33,3 +33,6 @@
 @import "components/header";
 @import "components/typography";
 @import "components/cards";
+@import "components/colors";
+@import "components/carousel";
+
