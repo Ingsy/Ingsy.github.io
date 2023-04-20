@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BID is an aution-website. This is where a user can login to BID"
+      content="BID is an aution-website. This is a registered user`s profile-page"
     />
-    <title>BID | Login</title>
+    <title>BID | Profile</title>
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -40,19 +40,22 @@
                 <a class="nav-link"  href="/index.html">Listings</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/profile/profile/profile.html">My Profile</a>
+                <a class="nav-link active" aria-current="page" href="/profile/profile/profile.html">My Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/login.html">Login</a>
+                <a class="nav-link" href="/profile/login/login.html">Login</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   filter
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu input yellow">
                   <li><a href="#" class="dropdown-item endedListings">Ended Listings</a></li>
+                  <hr class=" yellow mb-0 mt-0 ms-2 me-2">
                   <li><a href="#" class="dropdown-item activeListings">Active Listings</a></li>
+                  <hr class=" yellow mb-0 mt-0 ms-2 me-2">
                   <li><a href="#" class="dropdown-item myListingsOnly">My Listings</a></li>
+                  <hr class=" yellow mb-0 mt-0 ms-2 me-2">
                   <li><a href="#" class="dropdown-item all-listings">All Listings</a></li>
                 </ul>
               </li>
@@ -74,17 +77,26 @@
           </div>
         </div>
       </nav>
-
-      <div class="container navbar-color text-center">
-        <h1>Login</h1>
-        <div class="row align-items-center justify-content-center">
-          <div class="col-sm-12 col-md-5 col-lg-5">
-            <div class="card yellow-2">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 text-center mt-4">
+          
+        <div class="col-md-4">
+          <h2>LIST AN ITEM</h2>
+          <div class="card text-center align-items-center yellow white">
+            <div class="card-body">
               <form class="align-self-center">
-                <div class="m-4 text-start">
-                  <label for="Email" class="form-label mt-4"
-                    >Email address</label
-                  >
+                <div class="m-3 text-start">
+                  <label for="Name" class="form-label">Name</label>
+                  <input
+                    type="Name"
+                    class="form-control inputForm turq-2"
+                    id="Name"
+                    aria-describedby="Name"
+                    required
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="Email" class="form-label">Email address</label>
                   <input
                     type="email"
                     class="form-control inputForm turq-2"
@@ -93,32 +105,48 @@
                     required
                   />
                 </div>
-                <div class="m-4 text-start">
+                <div class="m-3 text-start">
                   <label for="Password" class="form-label">Password</label>
                   <input
                     type="password"
-                    class="form-control inputForm w3 turq-2"
+                    class="form-control inputForm turq-2"
                     id="Password"
                     required
                   />
                 </div>
-                <button type="submit" class="btn btn-2 w3 btn-turq">
-                  Login
+                <div class="m-3 text-start">
+                  <label for="img-listings" class="form-label">IMG</label>
+                  <input
+                    type="img-listings"
+                    class="form-control inputForm turq-2"
+                    id="img-listings"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-2 w25 btn-yellow mb-4">
+                  List Item
                 </button>
               </form>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-5">
-            <a
-              class="btn btn-2 w3 btn-turq mb-3"
-              href="../register/register.html"
-              >CREATE ACCUNT</a
-            >
-            <a class="btn btn-2 w2 btn-turq mb-3" href="/index.html"
-              >Back to listings</a
-            >
+            
           </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <h2>WELCOME</h2>
+        <div class="card text-center align-items-center">
+          <div class="card-body">
+          
+        </div>
+      </div>
+    </div>
+          <div class="col-md-4">
+          <h2>YOUR LISTINGS</h2>
+          <div class="card text-center align-items-center turq-2 white">
+            <div class="card-body">
+            
+          </div>
+        </div>
+      </div>
       </div>
       <nav class="navbar yellow-2">
         <div class="container-fluid">

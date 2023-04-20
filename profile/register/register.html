@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,8 +11,107 @@
     <title>BID | Register</title>
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../../css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="brand">
+            <a class="navbar-brand1" href="#">BID</a>
+            <div class="navbar-brand2">Sell & Buy</div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="container navbar-color text-center">
+        <h1>Create Account</h1>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-sm-12 col-md-4 col-lg-4 m-4">
+            <div class="card turq">
+              <form class="align-self-center">
+                <div class="m-3 text-start">
+                  <label for="Name" class="form-label">Name</label>
+                  <input
+                    type="Name"
+                    class="form-control inputForm turq-2"
+                    id="Name"
+                    aria-describedby="Name"
+                    required
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="Email" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control inputForm turq-2"
+                    id="Email"
+                    aria-describedby="emailHelp"
+                    required
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="Password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control inputForm turq-2"
+                    id="Password"
+                    required
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="Avatar" class="form-label">Avatar</label>
+                  <input
+                    type="Avatar"
+                    class="form-control inputForm turq-2"
+                    id="Avatar"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-2 w25 btn-yellow mb-4">
+                  Create Account
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-5 col-lg-5">
+            <a class="btn btn-2 w3 btn-yellow mb-3" href="../login/login.html"
+              >Login</a
+            >
+            <a class="btn btn-2 w2 btn-yellow mb-3" href="/index.html"
+              >Back to listings</a
+            >
+          </div>
+        </div>
+      </div>
+      <nav class="navbar yellow-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">©BID</a>
+        </div>
+      </nav>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b0782a38e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

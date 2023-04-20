@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,11 +8,119 @@
       name="description"
       content="BID is an aution-website. This page lets you checkout one single listing"
     />
-    <title>BID | Listing</title>
+    <title>BID | Welcome</title>
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <div class="brand">
+            <a class="navbar-brand1" href="#">BID</a>
+            <div class="navbar-brand2">Sell & Buy</div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="btn btn-3 mx-2" href="/index.html"
+                  >Listings</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-3 mx-2" href="/profile/profile.html">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-3 mx-2" href="#">Categories</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control input me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card text-center border-warning">
+              <img src="./img/testphot.jpg" class="card-img-bid" alt="..." />
+              <div class="card-body">
+                <div class="card-div">
+                  <h5 class="card-title text-start">Listing title</h5>
+                  <h5 class="card-text">Credit: 50</h5>
+                </div>
+                <hr class="mt-1 mb-2" />
+                <p>
+                 <p>description text ipsum lorum</p>
+                  <p>
+                    <hr class="mt-2" />
+                    <button
+                      class="btn"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapsebids"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                      href="collapsetext"
+                    >
+                    <i class="fa-solid fa fa-coins"></i>
+                      bid`s
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapsebids">
+                    <div class="card2 card-body">
+                      <div class="card-div2">
+                        <h3 class="card-text">date</h3>
+                        <h3 class="card-text">Credit: 30</h3>
+                      </div>
+                      <hr class="m-3" />
+                      <div class="card-div2">
+                        <h3 class="card-text">date</h3>
+                        <h3 class="card-text">Credit: 35</h3>
+                      </div>
+                    </div>
+                  </div>
+                  
+                <p> <i class="fa-solid fa fa-gavel m-1"></i>Auction ends: date</p>
+                <hr class="mt-2" />
+                <button class="btn btn-3">BID</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b0782a38e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
