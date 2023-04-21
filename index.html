@@ -17,47 +17,57 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <div class="brand">
-            <a class="navbar-brand1" href="#">BID</a>
-            <div class="navbar-brand2">Sell & Buy</div>
-          </div>
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid navbar-color">
+          <a class="navbar-brand" href="/index.html"><img class="img-brand"src="/img/brand.png"></a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="btn btn-3 active" aria-current="page" href="#"
-                  >Listings</a
-                >
+                <a class="nav-link active" aria-current="page"  href="/index.html">Listings</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-3" href="/profile/profile/profile.html"
-                  >profile</a
-                >
+                <a class="nav-link" href="/profile/profile/profile.html">My Profile</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-3" href="/profile/login/login.html">Login</a>
+                <a class="nav-link" href="/profile/login/login.html">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  filter
+                </a>
+                <ul class="dropdown-menu input yellow">
+                  <li><a href="#" class="dropdown-item endedListings">Ended Listings</a></li>
+                  <hr class=" yellow mb-0 mt-0 ms-2 me-2">
+                  <li><a href="#" class="dropdown-item activeListings">Active Listings</a></li>
+                  <hr class=" yellow mb-0 mt-0 ms-2 me-2">
+                  <li><a href="#" class="dropdown-item myListingsOnly">My Listings</a></li>
+                  <hr class=" yellow mb-0 mt-0 ms-2 me-2">
+                  <li><a href="#" class="dropdown-item all-listings">All Listings</a></li>
+                </ul>
+              </li>
+                </ul>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" id="searchform">
               <input
                 class="form-control input me-2"
-                type="search"
+                id="searchInput"
+                type="text"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-outline-secondary input me-4" type="submit">
                 Search
               </button>
             </form>

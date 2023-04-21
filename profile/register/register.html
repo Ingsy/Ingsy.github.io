@@ -17,25 +17,50 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <div class="brand">
-            <a class="navbar-brand1" href="#">BID</a>
-            <div class="navbar-brand2">Sell & Buy</div>
-          </div>
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid navbar-color">
+          <a class="navbar-brand" href="/index.html"><img class="img-brand"src="/img/brand.png"></a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link"  href="/index.html">Listings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="/profile/profile/profile.html">My Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile/login/login.html">Login</a>
+              </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" id="searchform">
+              <input
+                class="form-control input me-2"
+                id="searchInput"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-secondary input me-4" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
       </nav>
+
 
       <div class="container navbar-color text-center">
         <h1>Create Account</h1>
