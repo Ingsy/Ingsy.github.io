@@ -6,20 +6,6 @@
   display: flexbox;
 }
 
-.bg-light {
-  background-color: #eaf4f5;
-}
-
-/* Buttons*/
-
-.btn-2 {
-  border-radius: 0px 30px;
-  color: #000000;
-  border-width: 2px;
-  padding: 10px;
-  font-weight: bolder;
-}
-
 .w3 {
   width: 300px;
 }
@@ -30,6 +16,16 @@
 
 .w2 {
   width: 200px;
+}
+
+/* Buttons*/
+
+.btn-2 {
+  border-radius: 0px 30px;
+  color: #000000;
+  border-width: 2px;
+  padding: 10px;
+  font-weight: bolder;
 }
 
 .btn-yellow {
@@ -130,6 +126,10 @@ h2 {
 }
 
 /*colors*/
+
+.bg-light {
+  background-color: #eaf4f5;
+}
 
 .btn-yellow {
   background-color: #fcd029;

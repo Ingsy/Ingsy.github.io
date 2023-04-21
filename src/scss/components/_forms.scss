@@ -1,0 +1,27 @@
+/*forms*/
+
+.inputForm {
+    border-radius: $br-input;
+    min-width: $mah-250px;
+    height: $h-50;
+    margin-bottom: $m-40;
+    padding-left: $m-20;
+    border-color: $grey;
+  }
+  
+  .inputForm-textarea {
+    height: 100px;
+  }
+  
+  .inputForm-2 {
+    border-radius: $br-input;
+    max-width: $w-300px;
+    height: $h-50;
+    border-color: $yellow;
+  }
+  
+  .input {
+    border-radius: 5px 15px;
+    max-width: $mah-200px;
+  }
+  

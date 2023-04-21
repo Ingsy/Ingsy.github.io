@@ -1,8 +1,17 @@
+/*CARDS*/
+
 .card-img-bid {
   border-radius: $br-card;
-  max-width: $w-300px;
+  max-width: auto;
   max-height: $maw-400px;
-  padding: 10px;
+  padding-top: 20px;
+}
+
+.card-img-profile {
+  border-radius: $br-card;
+  max-width: auto;
+  max-height: $mah-200px;
+  padding-top: 20px;
 }
 
 .card {
@@ -11,7 +20,11 @@
   margin: 20px;
   border-color: none;
   max-width: $maw-400px;
-  min-height: 450px;
+  min-height: $mih-450px;
+}
+
+.br-change {
+  border-radius: $br-card;
 }
 
 .card2 {

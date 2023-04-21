@@ -1,18 +1,24 @@
+/* Buttons*/
+
 .btn-2 {
-  border-radius: 0px 30px;
-  color: #000000;
+  border-radius: $br-input;
+  color: $black;
   border-width: 2px;
   padding: 10px;
   font-weight: bolder;
 }
 
 .btn-yellow {
-  background-color: #fcd029;
-  border-color: #44c1c5;
+  background-color: $yellow;
+  border-color: $turqois;
 }
 
 .btn-turq {
-  background-color: #44c1c5;
-  border-color: #fcd029;
+  background-color: $turqois;
+  border-color: $yellow;
+}
+
+.btn-black {
+  color: $black;
 }
 

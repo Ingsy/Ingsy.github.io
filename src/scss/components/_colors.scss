@@ -1,18 +1,41 @@
-.turq {
-    background-color: $turquoise;
-  }
-  
-  .yellow-2 {
-    background-color: $yellow;
-  }
-  
-  .navbar-color {
-    background-color: $navbar-color;
-  }
-  
-  .yellow {
-    color: $yellow;
-    border: solid;
-  }
+/*colors*/
 
-  
+.bg-light {
+  background-color: $navbar-color;
+}
+
+.btn-yellow {
+  background-color: $yellow;
+  border-color: $turqois;
+}
+
+.btn-turq {
+  background-color: $turqois;
+  border-color: $yellow;
+}
+
+.turq {
+  background-color: $turqois;
+}
+
+.yellow-2 {
+  background-color: $yellow;
+}
+
+.navbar-color {
+  background-color: $navbar-color;
+}
+
+.white {
+  background-color: $white;
+}
+
+.yellow {
+  color: $yellow;
+  border: solid;
+}
+
+.turq-2 {
+  color: $turqois;
+  border: solid;
+}
