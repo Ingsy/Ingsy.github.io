@@ -14,6 +14,9 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../../css/styles.css" />
+    <script defer type="module" src="/src-js/js/handlers/register.mjs"></script>
+    <script defer type="module" src="/src-js/js/handlers/login.mjs"></script>
+    <script defer type="module" src="/src-js/index.mjs"></script> 
   </head>
   <body>
     <div class="container">
@@ -66,26 +69,31 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-sm-12 col-md-5 col-lg-5">
             <div class="card yellow-2">
-              <form class="align-self-center">
+              <form class="align-self-center" id="loginForm">
                 <div class="m-4 text-start">
-                  <label for="Email" class="form-label mt-4"
+                  <label for="email" class="form-label mt-4"
                     >Email address</label
                   >
                   <input
-                    type="email"
-                    class="form-control inputForm turq-2"
-                    id="Email"
-                    aria-describedby="emailHelp"
-                    required
+                  name="email"
+                  type="email"
+                  class="form-control inputForm w3 turq-2"
+                  id="email"
+                  aria-describedby="email"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$" 
+                  title="Only @(stud.)noroff.no domains are allowed to register."
                   />
                 </div>
                 <div class="m-4 text-start">
-                  <label for="Password" class="form-label">Password</label>
+                  <label for="password" class="form-label">Password</label>
                   <input
-                    type="password"
-                    class="form-control inputForm w3 turq-2"
-                    id="Password"
-                    required
+                  name="password"
+                  type="password"
+                  class="form-control inputForm w3 turq-2"
+                  id="password"
+                  minlength="8"
+                  required
                   />
                 </div>
                 <button type="submit" class="btn btn-2 w3 btn-turq">
