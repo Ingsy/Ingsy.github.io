@@ -1,16 +1,5 @@
-.navbar-brand1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #fcd029;
-  font-size: 70px;
-  letter-spacing: 15px;
-  text-decoration: none;
-}
-
-.navbar-brand2 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #000;
-  font-size: 30px;
-  text-decoration: none;
+.img-brand {
+  width: 100px;
 }
 
 .brand {
@@ -57,6 +46,21 @@
   color: #000000;
 }
 
+/* Typography*/
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+}
+
+/*CARDS*/
+
 .card-img-bid {
   border-radius: 0px 80px;
   max-width: auto;
@@ -71,23 +75,6 @@
   padding-top: 20px;
 }
 
-/* Typography*/
-
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-style: italic;
-}
-
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 23px;
-}
-
-/*colors*/
-
-/*CARDS*/
-
 .card {
   background-color: #eaf4f5;
   border-radius: 0px 80px;
@@ -97,13 +84,37 @@ h2 {
   min-height: 450px;
 }
 
+.br-change {
+  border-radius: 80px 0px;
+}
+
+.card2 {
+  border-radius: none;
+}
+
+.card-div {
+  justify-content: space-between;
+  display: flex;
+}
+
+.card-div2 {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+/*forms*/
+
 .inputForm {
   border-radius: 0px 30px;
   min-width: 250px;
   height: 50px;
   margin-bottom: 40px;
   padding-left: 20px;
-  border-color: #44c1c5;
+  border-color: #757676;
+}
+
+.inputForm-textarea {
+  height: 100px;
 }
 
 .inputForm-2 {
@@ -154,18 +165,4 @@ h2 {
 .turq-2 {
   color: #44c1c5;
   border: solid;
-}
-
-.card2 {
-  border-radius: none;
-}
-
-.card-div {
-  justify-content: space-between;
-  display: flex;
-}
-
-.card-div2 {
-  justify-content: space-evenly;
-  display: flex;
 }

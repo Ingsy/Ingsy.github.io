@@ -19,10 +19,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid navbar-color">
-          <a class="navbar-brand" href="/index.html">
-            <div>
-            <span class="navbar-brand1">BID</span><br><span class="navbar-brand2"><strong>SELL & BUY</strong></span></a>
-          </div>
+          <a class="navbar-brand" href="/index.html"><img class="img-brand"src="/img/brand.png"></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -79,50 +76,51 @@
       </nav>
       <div class="container">
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 text-center mt-4">
-          
-        <div class="col-md-4">
+        <div class="col-md-4 d-sm-none d-md-block">
           <h2>LIST AN ITEM</h2>
           <div class="card text-center align-items-center yellow white">
             <div class="card-body">
               <form class="align-self-center">
                 <div class="m-3 text-start">
-                  <label for="Name" class="form-label">Name</label>
+                  <label for="listing-title" class="form-label"></label>
                   <input
-                    type="Name"
-                    class="form-control inputForm turq-2"
-                    id="Name"
-                    aria-describedby="Name"
+                    type="listing-title"
+                    class="form-control inputForm"
+                    id="listing-title"
+                    aria-describedby="listing-title"
+                    placeholder="Title for your listing"
                     required
                   />
                 </div>
                 <div class="m-3 text-start">
-                  <label for="Email" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control inputForm turq-2"
-                    id="Email"
-                    aria-describedby="emailHelp"
+                  <label for="description" class="form-label"></label>
+                  <textarea
+                    type="description"
+                    class="form-control inputForm inputForm-textarea"
+                    id="description"
+                    aria-describedby="description"
+                    placeholder="Item-description..."
+                    maxlength="100"
+                    rows="4" cols="50"
                     required
-                  />
+                  ></textarea>
                 </div>
                 <div class="m-3 text-start">
-                  <label for="Password" class="form-label">Password</label>
-                  <input
-                    type="password"
-                    class="form-control inputForm turq-2"
-                    id="Password"
-                    required
-                  />
+                  <label for="listing-img" class="form-label"></label>
+                  <input type="url" name="media" class="form-control inputForm" id="listing-img" placeholder="img of items">
                 </div>
                 <div class="m-3 text-start">
-                  <label for="img-listings" class="form-label">IMG</label>
+                  <label for="credit-cost" class="form-label"></label>
                   <input
-                    type="img-listings"
-                    class="form-control inputForm turq-2"
-                    id="img-listings"
+                    type="credit-cost"
+                    class="form-control inputForm"
+                    id="credit-cost"
+                    aria-describedby="credit-cost"
+                    placeholder="Credit cost"
                     required
                   />
                 </div>
+              
                 <button type="submit" class="btn btn-2 w25 btn-yellow mb-4">
                   List Item
                 </button>
@@ -133,13 +131,24 @@
       </div>
       <div class="col-md-4">
         <h2>WELCOME</h2>
-        <div class="card text-center align-items-center">
-          <div class="card-body">
-          
+        <div class="card-div-2 d-none d-sm-block d-md-none">
+          <hr class="mt-4 mb-4" />
+          <button class="btn">Your Listings</button>
+      
+          <button class="btn">List an item</button>
+          <hr class="mt-4 mb-4" />
         </div>
-      </div>
-    </div>
-          <div class="col-md-4">
+          <div class="card text-center align-items-center">
+            <img src="/img/pexels-estevam-foto-16161517.jpg" class="card-img-bid" alt="..." />
+              <div class="card-body m-4">
+                <h2 class="mb-4">Jane Mclane</h2>
+                <h3 class="m-4">your credit: 1000</h3>
+                <hr class="mt-4 mb-4" />
+                <button class="btn turq" href="/profile/edit-avatar/index.html">Edit avatar</button>
+              </div>
+          </div>
+     </div>
+          <div class="col-md-4 d-sm-none d-md-block">
           <h2>YOUR LISTINGS</h2>
           <div class="card text-center align-items-center turq-2 white">
             <div class="card-body">
@@ -147,6 +156,7 @@
           </div>
         </div>
       </div>
+      
       </div>
       <nav class="navbar yellow-2">
         <div class="container-fluid">
