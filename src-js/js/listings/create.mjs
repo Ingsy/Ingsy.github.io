@@ -11,12 +11,12 @@ export async function createListing(postData) {
     // eslint-disable-next-line no-unused-vars
     const token = load("token");
 
+
     const response = await authFetch(createListingURL, {
         method,
         body: JSON.stringify({
             title: postData.title,
             description: postData.description,
-            tags: postData.tagsArray,
             media: postData.media,
             endsAt: postData.endsAt
         }),
