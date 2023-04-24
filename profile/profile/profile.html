@@ -46,7 +46,7 @@
                 <a class="nav-link" href="/profile/login/login.html">Login</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="ProfileName">
                  Name
                 </a>
                 <ul class="dropdown-menu">
@@ -112,15 +112,15 @@
                     class="form-control inputForm inputForm-textarea"
                     id="description"
                     aria-describedby="description"
-                    placeholder="Item-description..."
+                    placeholder="describe the item you are listing... (Optional)"
                     maxlength="100"
                     rows="4" cols="50"
                     name="description"
                   ></textarea>
                 </div>
                 <div class="m-3 text-start">
-                  <label for="listing-img" class="form-label"></label>
-                  <input type="url" name="media" class="form-control inputForm" id="listing-img" placeholder="img of items">
+                  <label for="media" class="form-label"></label>
+                  <input type="url" name="media" class="form-control inputForm" id="media" placeholder="img of items">
                 </div>
                 <div class="m-3 text-start">
                   <label for="endsAt" class="form-label"></label>
@@ -153,9 +153,9 @@
           <hr class="mt-4 mb-4" />
         </div>
           <div class="card text-center align-items-center">
-            <img src="/img/pexels-estevam-foto-16161517.jpg" class="card-img-profile" alt="..." />
+            <img src="/img/pexels-estevam-foto-16161517.jpg" id="avatar" class="card-img-profile" alt="..." />
               <div class="card-body m-4">
-                <h2 class="mb-4">Jane Mclane</h2>
+                <h2 class="mb-4" id="ProfileName">Jane Mclane</h2>
                 <h3 class="m-4">your credit: 1000</h3>
                 <hr class="mt-4 mb-4" />
                 <button class="btn turq" href="/profile/edit-avatar/index.html">Edit avatar</button>
