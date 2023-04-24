@@ -24,7 +24,7 @@ export async function login(profile, userName) {
     if (result.accessToken !== undefined && response.ok) {
         alert("You are now logged in");
         setTimeout(function () {
-            window.location.href = "/profile.html";
+            window.location.href = "/profile/profile/profile.html";
         }, 2500);
 
     } else if (result.accessToken === undefined) {
