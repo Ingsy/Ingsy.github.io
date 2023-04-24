@@ -8,6 +8,7 @@ const method = "post";
 export async function register(profile) {
     try {
         const registerURL = API_AUCTION_URL + action;
+        console.log(registerURL)
         const body = JSON.stringify(profile);
 
         const response = await fetch(registerURL, {

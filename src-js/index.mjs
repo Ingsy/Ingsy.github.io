@@ -1,8 +1,9 @@
 import * as listeners from "./js/handlers/index.mjs";
 import * as LOGIN from "./js/handlers/login.mjs";
-import { createListing } from "./js/listings/create.mjs";
+//import { createListing } from "./js/listings/create.mjs";
 import { setLogOut } from "./js/api/auth/logout.mjs";
 import * as storage from "./js/storage/index.mjs";
+//import * as listings from "./js/listings/index.mjs"
 
 
 const path = location.pathname;
@@ -31,4 +32,14 @@ function checkRouting() {
 window.onpaint = checkRouting();
 
 
-createListing();
+//createListing({
+//    title: "testing to create listing",
+//    description: "test 2",
+//    endsAt: "2023-05-24",
+//})
+
+
+//removeListing()
+
+//listings.getListings()
+
