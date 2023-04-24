@@ -14,6 +14,9 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../../css/styles.css" />
+    <script defer src="/src-js/js/handlers/index.mjs" type="module"></script>
+    <script defer src="/src-js/js/listings/index.mjs" type="module"></script>
+    <script defer src="/src-js/index.mjs" type="module"></script>
   </head>
   <body>
     <div class="container">
@@ -41,6 +44,15 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/profile/login/login.html">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Name
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/profile/login/login.html">login</a></li>
+                  <li><a class="dropdown-item" id="logout" href="/profile/login/login.html">log out</a></li>
+                </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,15 +92,16 @@
           <h2>LIST AN ITEM</h2>
           <div class="card text-center align-items-center yellow white">
             <div class="card-body">
-              <form class="align-self-center">
+              <form class="align-self-center" id="createListing">
                 <div class="m-3 text-start">
-                  <label for="listing-title" class="form-label"></label>
+                  <label for="title" class="form-label"></label>
                   <input
-                    type="listing-title"
+                    type="title"
                     class="form-control inputForm"
-                    id="listing-title"
-                    aria-describedby="listing-title"
+                    id="title"
+                    aria-describedby="title"
                     placeholder="Title for your listing"
+                    name="title"
                     required
                   />
                 </div>
@@ -102,7 +115,7 @@
                     placeholder="Item-description..."
                     maxlength="100"
                     rows="4" cols="50"
-                    required
+                    name="description"
                   ></textarea>
                 </div>
                 <div class="m-3 text-start">
@@ -110,13 +123,14 @@
                   <input type="url" name="media" class="form-control inputForm" id="listing-img" placeholder="img of items">
                 </div>
                 <div class="m-3 text-start">
-                  <label for="credit-cost" class="form-label"></label>
+                  <label for="endsAt" class="form-label"></label>
                   <input
-                    type="credit-cost"
+                    type="endsAt"
                     class="form-control inputForm"
-                    id="credit-cost"
-                    aria-describedby="credit-cost"
-                    placeholder="Credit cost"
+                    id="endsAt"
+                    aria-describedby="endsAt"
+                    placeholder="endsAt"
+                    name="endsAt"
                     required
                   />
                 </div>
