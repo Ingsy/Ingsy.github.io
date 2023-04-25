@@ -8,11 +8,12 @@
 }
 
 .card-img-profile {
-  border-radius: $br-card;
-  max-width: auto;
-  max-height: $mah-200px;
+  border-radius: 0px 60px;
+  max-width: 500px;
+  max-height: 350px;
   padding-top: 20px;
 }
+
 
 .card {
   background-color: $navbar-color;

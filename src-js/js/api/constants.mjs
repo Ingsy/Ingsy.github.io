@@ -9,6 +9,8 @@ export const searchForm = document.querySelector("#searchform");
 export const searchInput = document.querySelector("#searchInput");
 
 
+export const listingsWithImg = document.querySelector(".WithImg");
+export const listingsWithNoImg = document.querySelector(".NoImg");
 export const listingsEnded = document.querySelector(".endedListings");
 export const listingsActive = document.querySelector(".activeListings");
 export const myListingsOnly = document.querySelector(".myListingsOnly");
