@@ -13,7 +13,7 @@ export async function getListings() {
 
 export async function getListing(id) {
     if (!id) {
-        throw new Error("Get requires a ID");
+        throw new Error("Get requires ID");
     }
     const getListingURL = `${API_AUCTION_URL}${action}/${id}`;
     const response = await authFetch(getListingURL)
