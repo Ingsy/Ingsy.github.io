@@ -20100,8 +20100,8 @@ h2, .h2 {
 /*CARDS*/
 .card-img-bid {
   border-radius: 0px 80px;
-  max-width: auto;
-  max-height: 400px;
+  max-width: 200px;
+  max-height: 250px;
   padding-top: 20px;
 }
 
