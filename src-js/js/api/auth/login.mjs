@@ -17,11 +17,12 @@ export async function login(profile, userName) {
     });
 
     const result = await response.json();
-
-    storage.saveString("token", result.accessToken);
     storage.save("profile", { name: result.name, email: result.email });
+    storage.saveString("token", result.accessToken);
+    storage.saveString("email", result.email);
     storage.saveString("userName", result.name);
     storage.saveString("avatar", result.avatar);
+    storage.save("credits", result.credits);
     if (result.accessToken !== undefined && response.ok) {
         alert("You are now logged in");
         setTimeout(function () {
