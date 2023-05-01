@@ -62,17 +62,6 @@
                   filter
                 </a>
                 <ul class="dropdown-menu input yellow">
-                  <li>
-                    <a href="#" class="dropdown-item endedListings"
-                      >Ended Listings</a
-                    >
-                  </li>
-                  <hr class="yellow mb-0 mt-0 ms-2 me-2" />
-                  <li>
-                    <a href="#" class="dropdown-item activeListings"
-                      >Active Listings</a
-                    >
-                  </li>
                   <hr class="yellow mb-0 mt-0 ms-2 me-2" />
                   <li>
                     <a href="#" class="dropdown-item myListingsOnly"
@@ -110,126 +99,117 @@
         <div
           class="row row-cols-1 row-cols-md-2 row-cols-lg-2 text-center mt-4"
         >
-          <div class="col-md-6" id="listingsFeed">
-            <h1>LISTINGS</h1>
-            <div class="card text-center mx-auto align-items-center">
-              <div
-                id="carouselExampleIndicators"
-                class="carousel slide carousel-dark"
-                data-bs-ride="true"
+          <div class="card-div-2 d-none d-sm-block d-md-none">
+            <hr class="mt-4 mb-4" />
+
+            <div>
+              <button class="btn" id="myListingsOnly"></button>
+              <button
+                class="btn mb-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseYourListing"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                href="collapsetext"
               >
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="/img/pexels-efe-ersoy-15074803.jpg"
-                      class="d-block card-img-bid"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="/img/pexels-estevam-foto-16161517.jpg"
-                      class="d-block card-img-bid"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="/img/pexels-nektaria-kleopoulos-15071849.jpg"
-                      class="d-block card-img-bid"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-              <div class="card-body">
-                <div class="card-div">
-                  <h5 class="card-title text-start">Listing title</h5>
-                  <h5 class="card-text">Credit: 50</h5>
-                </div>
-                <hr class="mt-1 mb-2" />
+                Your Listings
+              </button>
 
-                <a class="btn" type="button" href="/single-listing.html">
-                  <i class="fa-solid fa fa-info"></i>
-                  info
-                </a>
-                <button
-                  class="btn"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapsebids"
-                  aria-expanded="false"
-                  aria-controls="collapseExample"
-                  href="collapsetext"
+              <div class="collapse" id="collapseYourListing">
+                <div
+                  class="card text-center mx-auto align-items-center turq-2 white"
                 >
-                  <i class="fa-solid fa fa-coins"></i>
-                  bid`s
-                </button>
-
-                <div class="collapse" id="collapsebids">
-                  <div class="card2 card-body">
-                    <div class="card-div2">
-                      <h3 class="card-text">date</h3>
-                      <h3 class="card-text">Credit: 30</h3>
-                    </div>
-                    <hr class="m-3" />
-                    <div class="card-div2">
-                      <h3 class="card-text">date</h3>
-                      <h3 class="card-text">Credit: 35</h3>
-                    </div>
+                  <div class="card-body">
+                    <div id="myListingsOnly"></div>
                   </div>
                 </div>
-                <hr class="mt-2" />
-                <button class="btn-2 w3 btn-yellow">BID</button>
               </div>
             </div>
+            <div>
+              <button class="btn" id="myListingsOnly"></button>
+              <button
+                class="btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseListItem"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                href="collapsetext"
+              >
+                List an item
+              </button>
+
+              <div class="collapse" id="collapseListItem">
+                <div
+                  class="card mx-auto text-center align-items-center yellow white"
+                >
+                  <div class="card-body">
+                    <form class="align-self-center" id="createListing">
+                      <div class="m-3 text-start">
+                        <label for="title" class="form-label"></label>
+                        <input
+                          type="title"
+                          class="form-control inputForm"
+                          id="title"
+                          aria-describedby="title"
+                          placeholder="Title for your listing"
+                          name="title"
+                          required
+                        />
+                      </div>
+                      <div class="m-3 text-start">
+                        <label for="description" class="form-label"></label>
+                        <textarea
+                          type="description"
+                          class="form-control inputForm inputForm-textarea"
+                          id="description"
+                          aria-describedby="description"
+                          placeholder="describe the item you are listing... (Optional)"
+                          maxlength="100"
+                          rows="4"
+                          cols="50"
+                          name="description"
+                        ></textarea>
+                      </div>
+                      <div class="m-3 text-start">
+                        <label for="media" class="form-label"></label>
+                        <input
+                          type="url"
+                          name="media"
+                          class="form-control inputForm"
+                          id="media"
+                          placeholder="img of items"
+                        />
+                      </div>
+                      <div class="m-3 text-start">
+                        <label for="endsAt" class="form-label"></label>
+                        <input
+                          type="endsAt"
+                          class="form-control inputForm"
+                          id="endsAt"
+                          aria-describedby="endsAt"
+                          placeholder="date when listing ends"
+                          name="endsAt"
+                          title="example: 2023-05-24"
+                          required
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-2 w25 btn-yellow mb-4"
+                      >
+                        List Item
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="mt-4 mb-4" />
           </div>
+          <div class="col-md-6" id="listingsFeed"></div>
           <div class="col-md-6 d-sm-none d-md-block">
             <h1>LIST AN ITEM</h1>
             <div
@@ -301,7 +281,9 @@
         </div>
       </nav>
     </div>
-
+    <script src="/src-js/js/handlers/index.mjs" type="module"></script>
+    <script src="/src-js/js/listings/index.mjs" type="module"></script>
+    <script src="/src-js/index.mjs" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
