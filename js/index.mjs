@@ -11,13 +11,11 @@ function checkRouting() {
     if (path.includes("login")) {
         LOGIN.setLoginFormListener();
         return;
-    } else if (path.includes("register")) {
-        listeners.setRegisterFormListener();
-        return;
     }
 
-    if (!storage.isLoggedIn()) {
-        window.location.href = "/pages/login"
+    if (path.includes("register")) {
+        listeners.setRegisterFormListener();
+        return;
     }
 
     if (path.includes("profile")) {
@@ -26,9 +24,16 @@ function checkRouting() {
     }
 
     if (path === "/" || path.includes("index")) {
-        listeners.listingFeed();
-        listeners.setCreateListingFormListener("#createListing");
-        listeners.allListings();
+        if (storage.isLoggedIn()) {
+            listeners.listingFeed();
+            listeners.setCreateListingFormListener("#createListing");
+            listeners.setCreateListingFormListener("#createListingMobile");
+            //listeners.getProfileListings()
+            //searchformMobile
+            listeners.allListings();
+        } else {
+            window.location.href = "/pages/public"
+        }
     }
 }
 
