@@ -15,9 +15,10 @@ export async function initPage() {
 
     const listings = await profileAPI.getProfileListings();
     displayListings(listings, "#myListingsOnly");
+    displayListings(listings, "#myListingsOnlyMobile");
 
     ProfileName.innerHTML = profile.name;
-    MyCredits.innerHTML = profile.credits;
+    MyCredits.innerHTML = "Total Credit: " + profile.credits;
     MyAvatar.src = profile.avatar;
 
     listeners.setCreateListingFormListener("#createListing");

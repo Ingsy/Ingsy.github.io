@@ -129,7 +129,7 @@
         <div class="card-div-2 d-none d-sm-block d-md-none">
           <hr class="mt-4 mb-4" />
           
-      <div><button class="btn" id="myListingsOnly"></button>
+      <div>
         <button
         class="btn mb-2"
         type="button"
@@ -144,16 +144,16 @@
       </button>
 
       <div class="collapse" id="collapseYourListing">
-        <div class="card text-center mx-auto align-items-center turq-2 white">
+        <div class="text-center mx-auto align-items-center">
           <div class="card-body">
-          <div id="myListingsOnly">
+          <div class="m-3" id="myListingsOnlyMobile">
 
           </div>
         </div>
       </div>
       </div>
       </div>
-      <div><button class="btn" id="myListingsOnly"></button>
+      <div>
         <button
         class="btn"
         type="button"
@@ -168,50 +168,47 @@
       </button>
 
       <div class="collapse" id="collapseListItem">
-        <div class="card mx-auto text-center align-items-center yellow white">
+        <div class="card mx-auto text-center align-items-center white">
           <div class="card-body">
             <form class="align-self-center" id="createListing" onsubmit="return false">
-              <div class="m-3 text-start">
-                <label for="title" class="form-label"></label>
+              <div class="m-3 text-start form-floating">
+                
                 <input
                   type="title"
                   class="form-control inputForm"
                   id="title"
                   aria-describedby="title"
-                  placeholder="Title for your listing"
                   name="title"
                   required
                 />
+                <label for="title" class="form-label">Listing-title (required)</label>
               </div>
-              <div class="m-3 text-start">
-                <label for="description" class="form-label"></label>
+              <div class="form-floating m-3 text-start">
                 <textarea
                   type="description"
                   class="form-control inputForm inputForm-textarea"
                   id="description"
                   aria-describedby="description"
-                  placeholder="describe the item you are listing... (Optional)"
                   maxlength="100"
-                  rows="4" cols="50"
                   name="description"
                 ></textarea>
+                <label for="description" class="form-label"> describe your Item (Optional)</label>
               </div>
-              <div class="m-3 text-start">
-                <label for="media" class="form-label"></label>
-                <input type="url" name="media" class="form-control inputForm" id="media" placeholder="img of items">
+              <div class="m-3 text-start form-floating">
+                <input type="url" name="media" class="form-control inputForm" id="media">
+                <label for="media" class="form-label">img of items (Optional)</label>
               </div>
-              <div class="m-3 text-start">
-                <label for="endsAt" class="form-label"></label>
+              <div class="m-3 text-start form-floating">
                 <input
                   type="endsAt"
                   class="form-control inputForm"
                   id="endsAt"
                   aria-describedby="endsAt"
-                  placeholder="date when listing ends"
                   name="endsAt"
-                  title="example: 2023-05-24"
+                  pattern="2023-05-24"
                   required
                 />
+                <label for="endsAt" class="form-label">end-date (required)</label>
               </div>
             
               <button type="submit" class="btn btn-2 w25 btn-yellow mb-4">
@@ -263,13 +260,13 @@
      </div>
           <div class="col-md-4 d-sm-none d-md-block">
           <h1>YOUR LISTINGS</h1>
-          <div class="card text-center align-items-center turq-2 white">
+          
             <div class="card-body">
             <div id="myListingsOnly">
 
             </div>
           </div>
-        </div>
+        
       </div>
       
       </div>
