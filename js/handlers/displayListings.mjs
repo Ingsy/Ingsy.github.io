@@ -1,8 +1,12 @@
-import { getListings, getListing } from "../listings/read.mjs";
+import {
+  getListings,
+  getListing,
+  getActiveListings,
+  getMyListings
+} from "../listings/read.mjs";
 import { BidOnListing } from "../listings/bid.mjs";
 import {
-  //listingsWithImg,
-  //listingsWithNoImg,
+  listingsActive,
   myListingsOnly,
   allListingsbtn,
   userName,
@@ -16,12 +20,13 @@ function displayBids(bids) {
   let bidsHtml = "";
   for (let i = 0; i < bids.length; i++) {
     const bid = bids[i];
-    bidsHtml += `
+    bidsHtml += ` 
     <div class="card-div">
-      <h3 class="card-text">${bid.bidderName}</h3>
-      <h3 class="card-text">${bid.amount}</h3>
-      <h3 class="card-text">${bid.created}</h3>
+      <h3 class="card-text m-2">${bid.bidderName}</h3>
+      <h3 class="card-text m-2">${bid.created}</h3>
+      <h3 class="card-text m-2">${bid.amount}</h3>
     </div>
+    <hr/>
     `;
   }
   return bidsHtml;
@@ -114,8 +119,8 @@ data-bs-ride="true"
               
               <div class="card-body text-center">
               <div class="card-div2">
-                  <h3>${listing.seller.name} </h3>
-                  <h3>bidding ends: ${listing.endsAt}</h3>
+                  <h3 class="me-3">${listing.seller.name}</h3>
+                  <h3>ends: ${listing.endsAt}</h3>
                 </div>
                 <hr class="mt-1 mb-2" />`;
   if (listing.description) {
@@ -157,7 +162,7 @@ data-bs-ride="true"
                   `;
   listingHTML += displayBids(listing.bids);
   listingHTML += `
-                  <hr/>
+                  
                   </div>
                 </div>`;
   if (listing.seller.name === userName) {
@@ -222,10 +227,15 @@ window.makeBid = makeBid;
 
 export async function listingFeed() {
   const listings = await getListings();
+  const activeListings = await getActiveListings();
+  const myListings = await getMyListings();
 
   myListingsOnly.addEventListener("click", function () {
-    const filtered = listings.filter(listing => listing.title === userName);
-    displayListings(filtered, "#listingsFeed")
+    displayListings(myListings, "#listingsFeed")
+  });
+
+  listingsActive.addEventListener("click", function () {
+    displayListings(activeListings, "#listingsFeed")
   });
 
   allListingsbtn.addEventListener("click", async function () {
@@ -237,7 +247,7 @@ export async function listingFeed() {
       if (listing.title.toLowerCase().includes(searchValue)) {
         return true;
       }
-      if (listing.author.name.toLowerCase().includes(searchValue)) {
+      if (listing.seller.name.toLowerCase().includes(searchValue)) {
         return true;
       }
       if (listing.id.toString().includes(searchValue)) {
