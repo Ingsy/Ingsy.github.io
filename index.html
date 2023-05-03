@@ -57,13 +57,19 @@
                   filter
                 </a>
                 <ul class="dropdown-menu input yellow">
-                  <hr class="yellow mb-0 mt-0 ms-2 me-2" />
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
                   <li>
-                    <a href="#" class="dropdown-item myListingsOnly"
+                    <a href="#" class="dropdown-item" id="myListingsOnly"
                       >My Listings</a
                     >
                   </li>
-                  <hr class="yellow mb-0 mt-0 ms-2 me-2" />
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
+                  <li>
+                    <a href="#" class="dropdown-item" id="activeListings"
+                      >Active Listings</a
+                    >
+                  </li>
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
                   <li>
                     <a href="#" class="dropdown-item all-listings"
                       >All Listings</a
@@ -94,35 +100,26 @@
         <div
           class="row row-cols-1 row-cols-md-2 row-cols-lg-2 text-center mt-4"
         >
-          <div class="card-div-2 d-none d-sm-block d-md-none">
-            <hr class="mt-4 mb-4" />
-
-            <div>
-              <button class="btn" id="myListingsOnly"></button>
-              <button
-                class="btn mb-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseYourListing"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-                href="collapsetext"
-              >
-                Your Listings
-              </button>
-
-              <div class="collapse" id="collapseYourListing">
-                <div
-                  class="card text-center mx-auto align-items-center turq-2 white"
+          <div class="card-div-2d-none d-sm-block d-md-none">
+            <form class="d-flex" role="search" id="searchformMobile">
+              <div class="mx-auto card-div">
+                <input
+                  class="form-control input me-2 mx-auto"
+                  id="searchInput"
+                  type="text"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-outline-secondary input me-4"
+                  type="submit"
                 >
-                  <div class="card-body">
-                    <div id="myListingsOnly"></div>
-                  </div>
-                </div>
+                  Search
+                </button>
               </div>
-            </div>
+            </form>
+            <hr class="mt-4 mb-4" />
             <div>
-              <button class="btn" id="myListingsOnly"></button>
               <button
                 class="btn"
                 type="button"
@@ -140,7 +137,7 @@
                   class="card mx-auto text-center align-items-center yellow white"
                 >
                   <div class="card-body">
-                    <form class="align-self-center" id="createListing">
+                    <form class="align-self-center" id="createListingMobile">
                       <div class="m-3 text-start">
                         <label for="title" class="form-label"></label>
                         <input
@@ -204,6 +201,7 @@
             </div>
             <hr class="mt-4 mb-4" />
           </div>
+
           <div class="col-md-6" id="listingsFeed"></div>
           <div class="col-md-6 d-sm-none d-md-block">
             <h1>LIST AN ITEM</h1>
