@@ -73,9 +73,18 @@ h1 {
 
 .card-img-bid {
   border-radius: 0px 80px;
-  max-width: 300;
-  max-height: 280px;
-  padding-top: 20px;
+  max-width: 400px;
+  object-fit: cover;
+  height: 24rem;
+  transition: transform 0.2s;
+  padding: 20px;
+}
+.card-img-bid:hoover {
+  transform: scale(1.1);
+}
+
+.carousel-indicators {
+  bottom: -20px;
 }
 
 .card-img-profile {
