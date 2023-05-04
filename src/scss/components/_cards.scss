@@ -2,8 +2,8 @@
 
 .card-img-bid {
   border-radius: $br-card;
-  max-width: 200px;
-  max-height: $mah-250px;
+  max-width: $w-300px;
+  max-height: 280px;
   padding-top: 20px;
 }
 
@@ -18,10 +18,10 @@
 .card {
   background-color: $navbar-color;
   border-radius: $br-card;
-  margin: 20px;
+  margin: 30px;
   border-color: none;
   max-width: $maw-400px;
-  min-height: $mih-450px;
+  min-height: $miw-350px;
 }
 
 .br-change {
