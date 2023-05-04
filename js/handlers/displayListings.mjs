@@ -67,21 +67,21 @@ data-bs-ride="true"
   ></button>
 </div>
 <div class="carousel-inner">
-  <div class="carousel-item active">
+  <div class="carousel-item active overflow-hidden">
     <img
       src="${listing.media}"
       class="d-block card-img-bid"
       alt="..."
     />
   </div>
-  <div class="carousel-item">
+  <div class="carousel-item overflow-hidden">
     <img
       src="${listing.media}"
       class="d-block card-img-bid"
       alt="..."
     />
   </div>
-  <div class="carousel-item">
+  <div class="carousel-item overflow-hidden">
     <img
       src="${listing.media}"
       class="d-block card-img-bid"
