@@ -4,13 +4,14 @@
     border-radius: $br-input;
     min-width: $mah-250px;
     height: $h-50;
-    margin-bottom: $m-40;
+    margin-bottom: $m-30;
     padding-left: $m-20;
-    border-color: $grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
   }
   
   .inputForm-textarea {
-    height: 100px;
+    height: 150px;
   }
   
   .inputForm-2 {
