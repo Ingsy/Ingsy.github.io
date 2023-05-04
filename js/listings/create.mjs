@@ -11,6 +11,7 @@ export async function createListing(listingData) {
     // eslint-disable-next-line no-unused-vars
     const token = load("token");
     //const mediaArray = listingData.media.split(",");
+    // use split and/or index of to fix Date/time
 
 
     const response = await authFetch(createListingURL, {
