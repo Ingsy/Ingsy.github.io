@@ -89,7 +89,17 @@ This is a Auction Site
 
 ## Appendix
 
-Any additional information goes here
+## Design-prototype
+
+https://xd.adobe.com/view/8edb65ae-21da-455c-a6ad-53993b9ffa76-db88/
+
+## Style-title
+
+https://xd.adobe.com/view/9ca7a3f5-ceb2-4e73-9b47-5ac16520533e-c9f4/
+
+## Trello-link
+
+https://trello.com/invite/b/m4wabXdD/ATTI86c13d260f643e1ca004b8be31673e184DE90F14/semester-project-2
 
 ## Authors
 
