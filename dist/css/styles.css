@@ -20056,9 +20056,11 @@ textarea.form-control-lg {
 .inputForm {
   border-radius: 0px 30px;
   min-width: 250px;
-  height: 40px;
+  height: 50px;
   margin-bottom: 30px;
   padding-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 .inputForm-textarea {

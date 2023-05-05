@@ -71,20 +71,18 @@ h1 {
   display: flex;
 }
 
-.card-img-bid {
-  border-radius: 0px 80px;
-  max-width: 400px;
+.card-img-bid-small {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 15px;
   object-fit: cover;
-  height: 24rem;
-  transition: transform 0.2s;
-  padding: 20px;
 }
-.card-img-bid:hoover {
-  transform: scale(1.1);
-}
-
-.carousel-indicators {
-  bottom: -20px;
+.card-img-bid-big {
+  border-radius: 15px;
+  max-width: 300px;
+  max-height: 415px;
+  margin: 15px;
+  object-fit: cover;
 }
 
 .card-img-profile {
@@ -101,6 +99,14 @@ h1 {
   border-color: none;
   max-width: 400px;
   min-height: 350px;
+}
+
+.card-single-listing {
+  background-color: #eaf4f5;
+  border-radius: 0px 80px;
+  margin: 50px;
+  max-width: 500px;
+  min-height: 500px;
 }
 
 .br-change {
