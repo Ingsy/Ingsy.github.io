@@ -2,7 +2,6 @@ import {
   getListings,
   getListing,
   getActiveListings,
-  getMyListings
 } from "../listings/read.mjs";
 import { BidOnListing } from "../listings/bid.mjs";
 import {
@@ -15,6 +14,7 @@ import {
 
 } from "../api/constants.mjs";
 import { removeListing } from "../listings/delete.mjs";
+import { getProfileListings } from "../api/profile.mjs"
 
 function displayBids(bids) {
   let bidsHtml = "";
@@ -32,14 +32,15 @@ function displayBids(bids) {
   return bidsHtml;
 }
 
-function displayListing(listing) {
-  let listingHTML = "";
-  listingHTML = `
-        <div class="col" id="listItem_${listing.id}">
-            <div class="card text-center mx-auto align-items-center">
-            <h5 class="card-title mt-3 mb-0">${listing.title}</h5>`;
-  if (listing.media) {
-    listingHTML += `<div
+function displayImages() {
+  const images = []
+  const imagesContainer = document.querySelector("#img-container");
+  for (let i = 0; i < images.length; i++) {
+    const img = document.createElement("img");
+    img.src = images[i];
+    imagesContainer.appendChild(img);
+    imagesContainer.innerHTML =
+      `<div id="img-container"><div
 id="carouselExampleIndicators"
 class="carousel slide carousel-dark"
 data-bs-ride="true"
@@ -69,21 +70,21 @@ data-bs-ride="true"
 <div class="carousel-inner">
   <div class="carousel-item active overflow-hidden">
     <img
-      src="${listing.media}"
+      src="${img.src}"
       class="d-block card-img-bid"
       alt="..."
     />
   </div>
   <div class="carousel-item overflow-hidden">
     <img
-      src="${listing.media}"
+      src="${img.src}"
       class="d-block card-img-bid"
       alt="..."
     />
   </div>
   <div class="carousel-item overflow-hidden">
     <img
-      src="${listing.media}"
+      src="${img.src}"
       class="d-block card-img-bid"
       alt="..."
     />
@@ -113,9 +114,26 @@ data-bs-ride="true"
   ></span>
   <span class="visually-hidden">Next</span>
 </button>
-</div>`;
+</div></div>`;
+    imagesContainer.innerHTML;
   }
+}
+
+
+
+
+
+
+function displayListing(listing) {
+  let listingHTML = "";
+  listingHTML = `
+        <div class="col" id="listItem_${listing.id}">
+            <div class="card text-center mx-auto align-items-center">
+            <h5 class="card-title mt-3 mb-0">${listing.title}</h5>
+            `;
+  listingHTML += displayImages(listing.media);
   listingHTML += `
+            
               
               <div class="card-body text-center">
               <div class="card-div2">
@@ -228,7 +246,7 @@ window.makeBid = makeBid;
 export async function listingFeed() {
   const listings = await getListings();
   const activeListings = await getActiveListings();
-  const myListings = await getMyListings();
+  const myListings = await getProfileListings();
 
   myListingsOnly.addEventListener("click", function () {
     displayListings(myListings, "#listingsFeed")

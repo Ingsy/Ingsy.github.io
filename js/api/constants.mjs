@@ -31,6 +31,7 @@ export const Credits = localStorage.getItem("credits")
 
 
 export const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+// eslint-disable-next-line no-undef
 export const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 

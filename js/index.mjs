@@ -1,5 +1,6 @@
 import * as listeners from "./handlers/index.mjs";
 import * as LOGIN from "./handlers/login.mjs";
+import { getProfileListings } from "../js/api/profile.mjs";
 import { initPage as initProfilePage } from "../pages/profile/profile.mjs";
 
 import * as storage from "./storage/index.mjs";
@@ -25,7 +26,9 @@ function checkRouting() {
 
     if (path === "/" || path.includes("index")) {
         if (storage.isLoggedIn()) {
+            getProfileListings("#myListingsOnly")
             listeners.listingFeed();
+            listeners.listingFeed("searchformMobile");
             listeners.setCreateListingFormListener("#createListing");
             listeners.setCreateListingFormListener("#createListingMobile");
             //listeners.getProfileListings()
