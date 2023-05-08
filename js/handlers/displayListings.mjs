@@ -13,115 +13,24 @@ import {
   searchInput,
 
 } from "../api/constants.mjs";
-import { removeListing } from "../listings/delete.mjs";
+import { deleteListing } from "../handlers/deleteListing.mjs";
 import { getProfileListings } from "../api/profile.mjs"
 
-function displayBids(bids) {
+export function displayBids(bids) {
   let bidsHtml = "";
   for (let i = 0; i < bids.length; i++) {
     const bid = bids[i];
     bidsHtml += ` 
     <div class="card-div">
       <h3 class="card-text m-2">${bid.bidderName}</h3>
-      <h3 class="card-text m-2">${bid.created}</h3>
-      <h3 class="card-text m-2">${bid.amount}</h3>
+      <h3 class="card-text m-2">${bid.created.slice(0, 10)}</h3>
+      <h3 class="card-text m-2"><strong>${bid.amount}</strong></h3>
     </div>
     <hr/>
     `;
   }
   return bidsHtml;
 }
-
-function displayImages() {
-  const images = []
-  const imagesContainer = document.querySelector("#img-container");
-  for (let i = 0; i < images.length; i++) {
-    const img = document.createElement("img");
-    img.src = images[i];
-    imagesContainer.appendChild(img);
-    imagesContainer.innerHTML =
-      `<div id="img-container"><div
-id="carouselExampleIndicators"
-class="carousel slide carousel-dark"
-data-bs-ride="true"
->
-<div class="carousel-indicators">
-  <button
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide-to="0"
-    class="active"
-    aria-current="true"
-    aria-label="Slide 1"
-  ></button>
-  <button
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide-to="1"
-    aria-label="Slide 2"
-  ></button>
-  <button
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide-to="2"
-    aria-label="Slide 3"
-  ></button>
-</div>
-<div class="carousel-inner">
-  <div class="carousel-item active overflow-hidden">
-    <img
-      src="${img.src}"
-      class="d-block card-img-bid"
-      alt="..."
-    />
-  </div>
-  <div class="carousel-item overflow-hidden">
-    <img
-      src="${img.src}"
-      class="d-block card-img-bid"
-      alt="..."
-    />
-  </div>
-  <div class="carousel-item overflow-hidden">
-    <img
-      src="${img.src}"
-      class="d-block card-img-bid"
-      alt="..."
-    />
-  </div>
-</div>
-<button
-  class="carousel-control-prev"
-  type="button"
-  data-bs-target="#carouselExampleIndicators"
-  data-bs-slide="prev"
->
-  <span
-    class="carousel-control-prev-icon"
-    aria-hidden="true"
-  ></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button
-  class="carousel-control-next"
-  type="button"
-  data-bs-target="#carouselExampleIndicators"
-  data-bs-slide="next"
->
-  <span
-    class="carousel-control-next-icon"
-    aria-hidden="true"
-  ></span>
-  <span class="visually-hidden">Next</span>
-</button>
-</div></div>`;
-    imagesContainer.innerHTML;
-  }
-}
-
-
-
-
 
 
 function displayListing(listing) {
@@ -130,35 +39,21 @@ function displayListing(listing) {
         <div class="col" id="listItem_${listing.id}">
             <div class="card text-center mx-auto align-items-center">
             <h5 class="card-title mt-3 mb-0">${listing.title}</h5>
-            `;
-  listingHTML += displayImages(listing.media);
-  listingHTML += `
-            
-              
+            <div class="">
+            <img
+              src="${listing.media}"
+              class="d-block card-img-bid-big"
+              alt="..."
+            />
+          </div>
               <div class="card-body text-center">
               <div class="card-div2">
                   <h3 class="me-3">${listing.seller.name}</h3>
-                  <h3>ends: ${listing.endsAt}</h3>
+                  <h3>ends: ${listing.endsAt.slice(0, 10)}</h3>
                 </div>
-                <hr class="mt-1 mb-2" />`;
-  if (listing.description) {
-    listingHTML += `    
-                
-                <button
-                type="button"
-                class="btn"
-                data-container="body"
-                data-bs-toggle="popover"
-                data-placement="right"
-                title="${listing.title}"
-                data-bs-content="${listing.description}"
-              >
-                description
-              </button>`;
-  }
-  listingHTML += `
+                <hr class="mt-1 mb-2" />
                 <a class="btn" type="button" href="/single-listing.html?id=${listing.id}">
-                  <i class="fa-solid fa fa-info"></i>
+                  view Listing
                 </a>
                 <button
                   class="btn"
@@ -184,10 +79,7 @@ function displayListing(listing) {
                   </div>
                 </div>`;
   if (listing.seller.name === userName) {
-    listingHTML += `<button class="btn del-button" type="button" aria-expanded="false" id="${listing.id}>
-    <i class="fa-solid fa fa-trash"></i>
-    delete listing
-  </button>`;
+    listingHTML += `<button class="btn del-button" type="button" id="${listing.id}">delete</button>`;
   }
   listingHTML += ` 
                 
@@ -228,7 +120,7 @@ export function displayListings(listings, containerId) {
   }
 }
 
-async function makeBid(event, id) {
+export async function makeBid(event, id) {
   event.preventDefault();
   const amountInput = document.querySelector(`#bidAmount_${id}`);
   await BidOnListing(id, parseInt(amountInput.value))
@@ -293,5 +185,5 @@ export async function allListings() {
   let listings = await getListings();
   displayListings(listings, "#listingsFeed");
 
-  removeListing();
+  deleteListing();
 }
