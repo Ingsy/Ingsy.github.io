@@ -13,7 +13,6 @@ export async function createListing(listingData) {
     //const mediaArray = listingData.media.split(",");
     // use split and/or index of to fix Date/time
 
-
     const response = await authFetch(createListingURL, {
         method,
         body: JSON.stringify({
