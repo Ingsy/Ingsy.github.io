@@ -1,17 +1,9 @@
-# Semester-Project2
-
 # Semester Project 2
 
 https://github.com/Ingsy/SemesterProject2.git
 
-This is a Auction Site
-
-## Acknowledgements
-
-- [Color Palettes](https://gillde.com/56-beautiful-color-palettes-for-your-next-design-project/)
-- [Free photos for testing - Pexels](https://www.pexels.com/nb-no/)
-- [regular expressions 101](https://regex101.com)
-- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+In this semester project we are making a auction Site for a client.
+The client has specified requirements in the for of User Stories, and technical restrictions. All API functionality is managed by an existing application.
 
 ## API Reference
 
@@ -90,8 +82,6 @@ This is a Auction Site
   GET /api/v1/auction/profiles/{name}/credits
 ```
 
-## Appendix
-
 ## Design-prototype
 
 https://xd.adobe.com/view/8edb65ae-21da-455c-a6ad-53993b9ffa76-db88/
@@ -135,6 +125,7 @@ To deploy this project run
 
 ## Demo
 
+A hosted application demo link -GitHub Pages [link]
 Insert gif or link to demo
 
 ## Documentation
@@ -166,4 +157,13 @@ Install my-project with npm
   cd my-project
 ```
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](https://ibb.co/34XnbHH)
+
+## Acknowledgements
+
+## Appendix
+
+- [Color Palettes](https://gillde.com/56-beautiful-color-palettes-for-your-next-design-project/)
+- [Free photos for testing - Pexels](https://www.pexels.com/nb-no/)
+- [regular expressions 101](https://regex101.com)
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
