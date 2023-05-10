@@ -157,7 +157,7 @@ Install my-project with npm
   cd my-project
 ```
 
-![Logo](https://ibb.co/34XnbHH)
+![Logo](https://i.ibb.co/WG9LX11/Brand.png)
 
 ## Acknowledgements
 
