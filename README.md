@@ -8,7 +8,7 @@ The client has specified requirements in the for of User Stories, and technical 
 ## API Reference
 
 [Swagger](https://api.noroff.dev/docs/static/index.html)
-[Noroff API](<[Swagger](https://api.noroff.dev/docs/static/index.html)>)
+[Noroff API](https://api.noroff.dev/docs/static/index.html)
 
 #### auction-auth
 
@@ -156,6 +156,8 @@ Install my-project with npm
   npm install my-project
   cd my-project
 ```
+
+## Logo
 
 ![Logo](https://i.ibb.co/WG9LX11/Brand.png)
 
