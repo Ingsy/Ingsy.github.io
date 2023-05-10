@@ -15,6 +15,9 @@ This is a Auction Site
 
 ## API Reference
 
+[Swagger](https://api.noroff.dev/docs/static/index.html)
+[Noroff API](<[Swagger](https://api.noroff.dev/docs/static/index.html)>)
+
 #### auction-auth
 
 ```http
