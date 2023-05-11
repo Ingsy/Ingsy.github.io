@@ -49,9 +49,8 @@
                   <li><a class="dropdown-item" id="logout" href="/pages/login">log out</a></li>
                 </ul>
               </li>
-                </ul>
-              </li>
-            </ul>
+              </ul>
+
             <form class="d-flex" role="search" id="searchform">
               <input
                 class="form-control input me-2"
@@ -70,8 +69,8 @@
       <div class="container">
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 text-center mt-4">
         <div class="col-md-4 d-sm-none d-md-block">
-          <h1>LIST AN ITEM</h1>
-          <div class="card text-center align-items-center yellow white">
+          <h1 class="white-font">LIST AN ITEM</h1>
+          <div class="card text-center align-items-center">
             <div class="card-body">
               <form
                   class="align-self-center"
@@ -109,10 +108,11 @@
                       type="url"
                       name="media"
                       class="form-control inputForm"
+                      pattern="https://.*"
                       id="media"
                     />
                     <label for="media" class="form-label"
-                      >img of items (Optional)</label
+                      >imgs of item (Optional)</label
                     >
                   </div>
                   <div class="text-start form-floating">
@@ -138,13 +138,13 @@
         </div>
       </div>
       <div class="col-md-4">
-        <h1>WELCOME</h1>
+        <h1 class="white-font">WELCOME</h1>
         <div class="card-div-2 d-none d-sm-block d-md-none">
-          <hr class="mt-4 mb-4" />
+          <hr class="hr mt-4 mb-4" />
           
       <div>
         <button
-        class="btn mb-2"
+        class="btn btn-green mb-2"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseYourListing"
@@ -168,7 +168,7 @@
       </div>
       <div>
         <button
-        class="btn"
+        class="btn btn-green"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseListItem"
@@ -209,7 +209,7 @@
               </div>
               <div class="text-start form-floating">
                 <input type="url" name="media" class="form-control inputForm" id="media">
-                <label for="media" class="form-label">img of items (Optional)</label>
+                <label for="media" class="form-label">imgs of items (Optional)</label>
               </div>
               <div class="text-start form-floating">
                 <input
@@ -233,7 +233,7 @@
       </div>
       </div>
       </div>
-          <hr class="mt-4 mb-4" />
+          <hr class="hr mt-4 mb-4" />
         </div>
           <div class="card mx-auto text-center align-items-center">
             <img src="" id="MyAvatar" class="card-img-profile" alt="..." />
@@ -272,7 +272,7 @@
           </div>
      </div>
           <div class="col-md-4 d-sm-none d-md-block">
-          <h1>YOUR LISTINGS</h1>
+          <h1 class="white-font">YOUR LISTINGS</h1>
           
             <div class="card-body">
             <div id="myListingsOnly">
