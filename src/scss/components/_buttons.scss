@@ -21,4 +21,20 @@
 .btn-black {
   color: $black;
 }
+.btn-green {
+  color: #44c1c5;
+  font-size: 18px;
+}
+
+.btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #fcd029;
+}
+
+.hr {
+  color: #fcd029;
+  border-width: 3px;
+  opacity: 1;
+}
 
