@@ -18,8 +18,8 @@ export async function createListing(listingData) {
             body: JSON.stringify({
                 title: listingData.title,
                 description: listingData.description,
-                media: listingData.media,
-                endsAt: listingData.endsAt
+                media: listingData.media, //mediaArray
+                endsAt: listingData.endsAt,
             }),
         });
         const listing = await response.json();
@@ -35,6 +35,9 @@ export async function createListing(listingData) {
     } catch (error) {
         console.log(error);
     }
+
+
+    // (The provided URL cannot be accessed, please check that the URL is correct)
 
 
 

@@ -16,6 +16,12 @@ export async function getActiveListings() {
     return await response.json();
 }
 
+export async function getEndedListings() {
+    const endedListingsURL = `${API_AUCTION_URL}${action}?_seller=true&_bids=true&_active=false`;
+    const response = await authFetch(endedListingsURL)
+    return await response.json();
+}
+
 export async function getListing(id) {
     if (!id) {
         throw new Error("Get requires ID");
