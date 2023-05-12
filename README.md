@@ -3,7 +3,7 @@
 https://github.com/Ingsy/SemesterProject2.git
 
 In this semester project we are making a auction Site for a client.
-The client has specified requirements in the for of User Stories, and technical restrictions. All API functionality is managed by an existing application.
+The client has specified requirements in the form of User Stories. All API functionality is managed by an existing application.
 
 ## Logo
 
@@ -77,7 +77,7 @@ Insert gif or link to demo
 ## setup local development
 
 1. Clone the repository
-2. Run `bash npm install` to install dependencies
+2. Run `npm install` to install dependencies
 3. Run npm start to start the development server
 
 ## Installation
