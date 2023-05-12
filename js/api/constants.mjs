@@ -16,7 +16,7 @@ export const searchInput = document.querySelector("#searchInput");
 
 
 
-export const listingsEnded = document.querySelector(".endedListings");
+export const listingsEnded = document.querySelector(".ended-listings");
 export const listingsActive = document.querySelector("#activeListings");
 export const myListingsOnly = document.querySelector("#myListingsOnly");
 export const allListingsbtn = document.querySelector(".all-listings");

@@ -2,10 +2,12 @@ import {
   getListings,
   getListing,
   getActiveListings,
+  getEndedListings,
 } from "../listings/read.mjs";
 import { BidOnListing } from "../listings/bid.mjs";
 import {
   listingsActive,
+  listingsEnded,
   myListingsOnly,
   allListingsbtn,
   userName,
@@ -138,10 +140,15 @@ window.makeBid = makeBid;
 export async function listingFeed() {
   const listings = await getListings();
   const activeListings = await getActiveListings();
+  const endedListings = await getEndedListings();
   const myListings = await getProfileListings();
 
   myListingsOnly.addEventListener("click", function () {
     displayListings(myListings, "#listingsFeed")
+  });
+
+  listingsEnded.addEventListener("click", function () {
+    displayListings(endedListings, "#listingsFeed")
   });
 
   listingsActive.addEventListener("click", function () {
