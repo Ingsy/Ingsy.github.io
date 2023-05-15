@@ -1,6 +1,5 @@
 import { authFetch } from "../api/authFetch.mjs";
 import { API_AUCTION_URL } from "../api/constants.mjs";
-import { load } from "../storage/index.mjs";
 
 const action = "/listings";
 const method = "post";
@@ -9,10 +8,6 @@ const method = "post";
 export async function createListing(listingData) {
     try {
         const createListingURL = API_AUCTION_URL + action;
-        // eslint-disable-next-line no-unused-vars
-        const token = load("token");
-        //const mediaArray = listingData.media.split(",");
-
         const response = await authFetch(createListingURL, {
             method,
             body: JSON.stringify({
@@ -23,7 +18,6 @@ export async function createListing(listingData) {
             }),
         });
         const listing = await response.json();
-        console.log(listing);
         if (!response.ok) {
             alert("Something went wrong! please check that you filled out the required inputs, and check that your image/s have a valid URL")
         } else {
@@ -35,15 +29,6 @@ export async function createListing(listingData) {
     } catch (error) {
         console.log(error);
     }
-
-
-    // (The provided URL cannot be accessed, please check that the URL is correct)
-
-
-
-
-
-
 
 }
 
