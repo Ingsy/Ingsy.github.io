@@ -108,6 +108,29 @@ h1 {
   object-fit: cover;
 }
 
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-listing-image {
+  /*Small image*/
+  padding: 0;
+  border-radius: 15px;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 15px;
+  object-fit: cover;
+}
+
+.single-listing-image:last-of-type {
+  /*Big image*/
+  max-width: 90%;
+  max-height: 400px;
+  flex-basis: 100%;
+}
+
 .card-img-profile {
   border-radius: 0px 60px;
   max-width: 500px;
