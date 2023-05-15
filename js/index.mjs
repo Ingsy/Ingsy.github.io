@@ -11,7 +11,7 @@ import * as storage from "./storage/index.mjs";
 
 const path = location.pathname;
 
-function checkRouting() {
+async function checkRouting() {
     if (path.includes("login")) {
         LOGIN.setLoginFormListener();
         return;
@@ -23,13 +23,13 @@ function checkRouting() {
     }
 
     if (path.includes("profile")) {
-        initProfilePage();
+        await initProfilePage();
         listeners.deleteListing();
         return;
     }
 
-    if (path === "/" || path.includes("single-listing")) {
-        singleListing("#singleListing");
+    if (path.includes("single-listing")) {
+        await singleListing("#singleListing");
         return;
     }
 
@@ -44,9 +44,12 @@ function checkRouting() {
 
         else {
             window.location.href = "/pages/public"
-            //   listeners.allListings();
-            //   listeners.listingFeed();
         }
+    }
+
+    if (path.includes("public")) {
+        listeners.allListings();
+        listeners.listingFeed();
     }
 }
 

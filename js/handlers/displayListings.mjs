@@ -141,11 +141,13 @@ export async function listingFeed() {
   const listings = await getListings();
   const activeListings = await getActiveListings();
   const endedListings = await getEndedListings();
-  const myListings = await getProfileListings();
 
-  myListingsOnly.addEventListener("click", function () {
-    displayListings(myListings, "#listingsFeed")
-  });
+  if (myListingsOnly) {
+    const myListings = await getProfileListings();
+    myListingsOnly.addEventListener("click", function () {
+      displayListings(myListings, "#listingsFeed")
+    });
+  }
 
   listingsEnded.addEventListener("click", function () {
     displayListings(endedListings, "#listingsFeed")
