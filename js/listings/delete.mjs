@@ -6,14 +6,22 @@ const action = "/listings";
 const method = "delete";
 
 export async function removeListing(id) {
-    if (!id) {
-        throw new Error("Delete requires a listingID");
+    try {
+        const deleteListingURL = `${API_AUCTION_URL}${action}/${id}`;
+        const response = await authFetch(deleteListingURL, {
+            method
+        })
+
+        if (!response.ok) {
+            throw new Error("Delete requires a listingID");
+        } else {
+            alert("listing deleted")
+        }
+
+
+        return await response.json();
+    } catch (error) {
+        console.log(error)
     }
-    const deleteListingURL = `${API_AUCTION_URL}${action}/${id}`;
-    const response = await authFetch(deleteListingURL, {
-        method
-    })
-    alert("listing deleted")
-    return await response.json();
 
 }
