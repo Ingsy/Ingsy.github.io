@@ -147,11 +147,22 @@ h1 {
   min-height: 350px;
 }
 
+.description {
+  background-color: #a1e2e8;
+  border-radius: 0px 30px;
+  margin: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+}
+
 .card-single-listing {
   background-color: #eaf4f5;
   border-radius: 0px 80px;
   margin: 50px;
-  max-width: 500px;
+  max-width: 400px;
   min-height: 500px;
 }
 
@@ -228,6 +239,10 @@ textarea {
 
 .navbar-color {
   background-color: #20c3d2;
+}
+
+.navbar-color-element {
+  color: #20c3d2;
 }
 
 .white {

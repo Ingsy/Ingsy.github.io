@@ -31,18 +31,21 @@ export async function displaySingleListing(listings, containerId) {
     listingHTML += displayMedia(listings[i].media);
     listingHTML += `
                 </div>
-              <hr class="mt-1 mb-2" />
+              <hr class="hr m-2" />
                 <div class="card-div m-3">
-                  <h3>${listings[i].seller.name}</h3>
-                  <h3>bidding ends:${listings[i].endsAt}</h3>
+                  <h3>Seller: ${listings[i].seller.name}</h3>
+                  <h3>bidding ends: ${listings[i].endsAt.slice(0, 10)}</h3>
                 </div>`;
     if (listings[i].description) {
-      listingHTML += `<hr class="mt-1 mb-2" />
-                description: 
+      listingHTML += `
+      <div class="description">
+                <h3 class="text-start">description: </h3>
                 <p class="text-start mt-2">${listings[i].description}</p> 
-                <hr class="mt-1 mb-2" />`;
+                </div>`;
     }
-    listingHTML += `          
+    listingHTML += `  
+  
+          
                 <button
                 class="btn"
                 type="button"
@@ -71,7 +74,7 @@ export async function displaySingleListing(listings, containerId) {
     }
     listingHTML += ` 
               
-              <hr class="mt-2" />
+              <hr class="hr m-3" />
               <div>
                 <button
                 class="btn-2 w25 btn-yellow"
