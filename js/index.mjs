@@ -3,11 +3,9 @@ import * as LOGIN from "./handlers/login.mjs";
 import { getProfileListings } from "../js/api/profile.mjs";
 import { initPage as initProfilePage } from "../pages/profile/profile.mjs";
 import { singleListing } from "./handlers/SingleDisplay.mjs";
-//import { removeListing } from "./listings/delete.mjs";
-
+import { setLogOut } from "./api/auth/logout.mjs";
 import * as storage from "./storage/index.mjs";
 
-//import * as listings from "./listings/index.mjs"
 
 const path = location.pathname;
 
@@ -40,6 +38,7 @@ async function checkRouting() {
             listeners.setCreateListingFormListener("#createListing");
             listeners.setCreateListingFormListener("#createListingMobile");
             listeners.allListings();
+            setLogOut();
         }
 
         else {
