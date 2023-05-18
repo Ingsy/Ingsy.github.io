@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BID is an aution-website. This is the landingsite for BID"
+    />
+    <title>BID | Welcome</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid navbar-color">
+          <a class="navbar-brand" href="/index.html"
+            ><img class="img-brand" src="/img/brand.png"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"
+                  >Listings</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/profile">My Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="logout" href="/pages/login">log out</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  filter
+                </a>
+                <ul class="dropdown-menu input yellow">
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
+                  <li>
+                    <a href="#" class="dropdown-item" id="myListingsOnly"
+                      >My Listings</a
+                    >
+                  </li>
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
+                  <li>
+                    <a href="#" class="dropdown-item" id="activeListings"
+                      >Active Listings</a
+                    >
+                  </li>
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
+                  <li>
+                    <a href="#" class="dropdown-item ended-listings"
+                      >Ended Listings</a
+                    >
+                  </li>
+                  <hr class="mb-0 mt-0 ms-2 me-2" />
+                  <li>
+                    <a href="#" class="dropdown-item all-listings"
+                      >All Listings</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" id="searchform">
+              <input
+                class="form-control input m-2"
+                id="searchInput"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-secondary input m-2 me-4"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-2 text-center mt-4"
+        >
+          <div class="card-div-2d-none d-sm-block d-md-none">
+            <hr class="hr mt-4 mb-4" />
+
+            <div>
+              <button
+                class="btn btn-green"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseListItem"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                href="collapsetext"
+              >
+                List an item
+              </button>
+
+              <div class="collapse" id="collapseListItem">
+                <div
+                  class="card mx-auto text-center align-items-center yellow white"
+                >
+                  <div class="card-body">
+                    <form
+                      class="align-self-center"
+                      id="createListingMobile"
+                      onsubmit="return false"
+                    >
+                      <div class="mt-3 text-start form-floating">
+                        <input
+                          type="title"
+                          class="form-control inputForm"
+                          id="title"
+                          aria-describedby="title"
+                          name="title"
+                          required
+                        />
+                        <label for="title" class="form-label"
+                          >Listing-title (required)</label
+                        >
+                      </div>
+                      <div class="form-floating text-start">
+                        <textarea
+                          type="description"
+                          class="form-control inputForm"
+                          id="description"
+                          aria-describedby="description"
+                          maxlength="100"
+                          name="description"
+                        ></textarea>
+                        <label for="description" class="form-label">
+                          describe your Item (Optional)</label
+                        >
+                      </div>
+                      <div class="text-start form-floating">
+                        <input
+                          type="url"
+                          name="media"
+                          class="form-control inputForm"
+                          id="media"
+                        />
+                        <label for="media" class="form-label"
+                          >img of items (Optional)</label
+                        >
+                      </div>
+                      <div class="text-start form-floating">
+                        <input
+                          type="endsAt"
+                          class="form-control inputForm"
+                          id="endsAt"
+                          aria-describedby="endsAt"
+                          name="endsAt"
+                          pattern="2023-05-24"
+                          required
+                        />
+                        <label for="endsAt" class="form-label"
+                          >end-date (required)</label
+                        >
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-2 w25 btn-yellow mb-4"
+                      >
+                        List Item
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="hr mt-4 mb-4" />
+          </div>
+
+          <div class="col-md-6" id="listingsFeed"></div>
+          <div class="col-md-6 d-sm-none d-md-block">
+            <div class="card mx-auto text-center align-items-center">
+              <h1>LIST AN ITEM</h1>
+              <div class="card-body">
+                <form
+                  class="align-self-center"
+                  id="createListing"
+                  onsubmit="return false"
+                >
+                  <div class="mt-3 text-start form-floating">
+                    <input
+                      type="title"
+                      class="form-control inputForm"
+                      id="title"
+                      aria-describedby="title"
+                      name="title"
+                      required
+                    />
+                    <label for="title" class="form-label"
+                      >Listing-title (required)</label
+                    >
+                  </div>
+                  <div class="form-floating text-start">
+                    <textarea
+                      type="description"
+                      class="form-control inputForm"
+                      id="description"
+                      aria-describedby="description"
+                      maxlength="100"
+                      name="description"
+                    ></textarea>
+                    <label for="description" class="form-label">
+                      describe your Item (Optional)</label
+                    >
+                  </div>
+                  <div class="text-start form-floating">
+                    <input
+                      type="url"
+                      name="media"
+                      class="form-control inputForm"
+                      id="media"
+                    />
+                    <label for="media" class="form-label"
+                      >img of items (Optional)</label
+                    >
+                  </div>
+                  <div class="text-start form-floating">
+                    <input
+                      type="endsAt"
+                      class="form-control inputForm"
+                      id="endsAt"
+                      aria-describedby="endsAt"
+                      name="endsAt"
+                      pattern="2023-05-24"
+                      required
+                    />
+                    <label for="endsAt" class="form-label"
+                      >end-date (required)</label
+                    >
+                  </div>
+
+                  <button type="submit" class="btn btn-2 w25 btn-yellow mb-4">
+                    List Item
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar yellow-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">©BID</a>
+        </div>
+      </nav>
+    </div>
+    <script src="/js/handlers/index.mjs" type="module"></script>
+    <script src="/js/listings/index.mjs" type="module"></script>
+    <script src="/js/index.mjs" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b0782a38e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
