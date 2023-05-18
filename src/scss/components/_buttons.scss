@@ -1,0 +1,40 @@
+/* Buttons*/
+
+.btn-2 {
+  border-radius: $br-input;
+  color: $black;
+  border-width: 2px;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.btn-yellow {
+  background-color: $yellow;
+  border-color: $turqois;
+}
+
+.btn-turq {
+  background-color: $turqois;
+  border-color: $yellow;
+}
+
+.btn-black {
+  color: $black;
+}
+.btn-green {
+  color: #44c1c5;
+  font-size: 18px;
+}
+
+.btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #fcd029;
+}
+
+.hr {
+  color: #fcd029;
+  border-width: 3px;
+  opacity: 1;
+}
+

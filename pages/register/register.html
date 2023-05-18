@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BID is an aution-website. This page lets you register a user to BID"
+    />
+    <title>BID | Register</title>
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script defer type="module" src="/js/handlers/register.mjs"></script>
+    <script defer type="module" src="/js/index.mjs"></script> 
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid navbar-color">
+          <a class="navbar-brand" href="/index.html"><img class="img-brand"src="/img/brand.png"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link"  href="/">Listings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/login">Login</a>
+              </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" id="searchform">
+              <input
+                class="form-control input me-2"
+                id="searchInput"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-secondary input me-4" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="container navbar-color text-center">
+        
+        <div class="row align-items-center justify-content-center">
+          <div class="col-sm-12 col-md-4 col-lg-4 m-4">
+            <h1 class="m-5 white-font">Create Account</h1>
+            <div class="card mx-auto turq">
+              <form class="align-self-center" id="registerForm">
+                <div class="m-3 text-start">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                  name="name"
+                    type="text"
+                    class="form-control inputForm turq-2"
+                    id="name"
+                    aria-describedby="name"
+                    pattern="^[\w]+$" 
+                    title="user name must only contain lower case and upper case letter, numbers and underscore (_) Example: A_user2023"
+                    required
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="email" class="form-label">Email address</label>
+                  <input
+                  name="email"
+                    type="email"
+                    class="form-control inputForm turq-2"
+                    id="email"
+                    aria-describedby="email"
+                    required
+                    pattern="^[\w\-.]+@stud.noroff.no$" 
+                    title="Only @stud.noroff.no domains are allowed to register."
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                  name="password"
+                    type="password"
+                    class="form-control inputForm turq-2"
+                    id="password"
+                    minlength="8"
+                    required
+                  />
+                </div>
+                <div class="m-3 text-start">
+                  <label for="Avatar" class="form-label">Avatar</label>
+                  <input
+                    type="url"
+                    class="form-control inputForm turq-2"
+                    id="Avatar"
+                    name="Avatar"
+              
+                  />
+                </div>
+                <button type="submit" class="btn btn-2 w25 btn-yellow mb-4">
+                  Create Account
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-5 col-lg-5">
+            <hr class="hr ms-5 me-5">
+            <a class="btn btn-2 w3 btn-yellow m-3" href="/pages/login/"
+              >Login</a
+            >
+            <a class="btn btn-2 w2 btn-yellow m-3" href="/index.html"
+              >Back to listings</a
+            >
+          </div>
+          
+        </div>
+      </div>
+      <nav class="navbar yellow-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">©BID</a>
+        </div>
+      </nav>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b0782a38e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
