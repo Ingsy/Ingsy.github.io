@@ -54,8 +54,6 @@ https://placker.com/app#/gantt/view/sh8b9z7uz92io?e=b&s=p43232
 
 - [@Ingsy](https://github.com/Ingsy)
 
-## Badges
-
 ## Deployment
 
 This project deployed to GitHub Pages. The deployment is triggered automatically when a new Pull Request is merged into the master branch.
