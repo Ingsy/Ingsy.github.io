@@ -22,19 +22,22 @@
   color: $black;
 }
 .btn-green {
-  color: #44c1c5;
+  color: $turqois;
   font-size: 18px;
 }
 
 .btn:hover {
-  color: #000000;
-  background-color: #ffffff;
-  border-color: #fcd029;
+  color: $black;
+  background-color: $white;
+  border-color: $yellow;
 }
 
 .hr {
-  color: #fcd029;
+  color: $yellow;
   border-width: 3px;
   opacity: 1;
 }
 
+.white-font {
+  color: $white;
+}

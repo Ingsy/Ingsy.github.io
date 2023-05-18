@@ -80,12 +80,6 @@ h1 {
 
 /*CARDS*/
 
-.seller_avatar {
-  border-radius: 50%;
-  max-width: 50px;
-  max-height: 100px;
-}
-
 .card_seller {
   border-color: #000000;
   max-height: 50px;
