@@ -41,7 +41,7 @@ function displayListing(listing) {
         <div class="col" id="listItem_${listing.id}">
             <div class="card text-center mx-auto align-items-center">
             <h5 class="card-title mt-3 mb-0">${listing.title}</h5>
-            <div class="">
+            <div>
             <img
               src="${listing.media}"
               class="d-block card-img-bid-big"
