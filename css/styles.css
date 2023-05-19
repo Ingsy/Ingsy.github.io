@@ -29,7 +29,7 @@
 }
 
 .nav-link.active {
-  font-size: 22px;
+  text-decoration: underline;
 }
 
 .btn-2 {

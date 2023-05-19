@@ -15,6 +15,7 @@ export async function register(profile) {
             headers: {
                 "content-Type": "application/json"
             },
+            mode: 'cors',
             method,
             body
         })
