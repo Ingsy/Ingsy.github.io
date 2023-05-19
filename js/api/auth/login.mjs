@@ -14,6 +14,7 @@ export async function login(profile, userName) {
             headers: {
                 "content-Type": "application/json",
             },
+            mode: 'cors',
             method,
             body,
         });
