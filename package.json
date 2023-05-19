@@ -1,6 +1,6 @@
 {
   "name": "semesterproject2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "website for listing, selling and buying items",
   "type": "module",
   "main": "src/index.js",
