@@ -13,7 +13,9 @@ export async function register(profile) {
 
         const response = await fetch(registerURL, {
             headers: {
-                "content-Type": "application/json"
+                "content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
             },
             mode: 'cors',
             method,
