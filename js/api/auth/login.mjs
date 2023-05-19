@@ -12,6 +12,8 @@ export async function login(profile, userName) {
 
         const response = await fetch(loginURL, {
             headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
                 "content-Type": "application/json",
             },
             mode: 'cors',
