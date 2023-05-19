@@ -12,7 +12,7 @@ export async function login(profile, userName) {
 
         const response = await fetch(loginURL, {
             headers: {
-                "Access-Control-Allow-Origin": "*"
+                "content-Type": "application/json",
             },
             method,
             body,
