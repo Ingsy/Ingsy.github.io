@@ -45,7 +45,7 @@ function displayListing(listing) {
             <img
               src="${listing.media}"
               class="d-block card-img-bid-big"
-              alt="..."
+              alt="Image of listing"
             />
           </div>
               <div class="card-body text-center">

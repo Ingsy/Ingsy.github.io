@@ -1,5 +1,10 @@
 /* Buttons*/
 
+.btn:focus {
+  color: $navbar-element;
+}
+
+
 .btn-2 {
   border-radius: $br-input;
   color: $black;

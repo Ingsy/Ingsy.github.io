@@ -10,7 +10,7 @@ export function displayMedia(media) {
   let mediaHtml = "";
   for (let i = 0; i < media.length && i < 3; i++) {
     const url = media[i];
-    mediaHtml += `<img src="${url}" class="single-listing-image" alt="..." />`;
+    mediaHtml += `<img src="${url}" class="single-listing-image" alt="image of listing" />`;
   }
   return mediaHtml;
 }
