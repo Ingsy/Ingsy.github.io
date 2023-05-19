@@ -24,6 +24,14 @@
   color: #20c3d2;
 }
 
+.nav-link {
+  color: #000000;
+}
+
+.nav-link.active {
+  font-size: 22px;
+}
+
 .btn-2 {
   border-radius: 0px 30px;
   color: #000000;
