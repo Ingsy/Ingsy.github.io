@@ -56,11 +56,16 @@ https://placker.com/app#/gantt/view/sh8b9z7uz92io?e=b&s=p43232
 
 ## Deployment
 
-This project deployed to GitHub Pages. The deployment is triggered automatically when a new Pull Request is merged into the master branch.
+This project Build and Deploy to GithubPages on workflow_dispatch
 
-```bash
-  npm run deploy
-```
+## Demo
+
+A hosted application demo link -GitHub Pages
+[https://ingsy.github.io/]
+
+## Badges
+
+[![Build and Deploy to GithubPages](https://github.com/Ingsy/ingsy.github.io/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/Ingsy/ingsy.github.io/actions/workflows/build-deploy.yml)
 
 ## Color Reference
 
@@ -70,11 +75,6 @@ This project deployed to GitHub Pages. The deployment is triggered automatically
 | Turqois    | ![#f8f8f8](https://via.placeholder.com/10/44C1C5?text=+) #EAF4F5 |
 | black      | ![#000000](https://via.placeholder.com/10/000000?text=+) #00b48a |
 | light blue | ![#EAF4F5](https://via.placeholder.com/10/EAF4F5?text=+) #00d1a0 |
-
-## Demo
-
-A hosted application demo link -GitHub Pages [link]
-Insert gif or link to demo
 
 ## setup local development
 
