@@ -85,10 +85,10 @@ function displayListing(listing) {
   }
   listingHTML += ` 
                 
-                <hr class="mt-2" />
+                
                 <div>
                   <button
-                  class="btn-2 w25 btn-yellow"
+                  class="btn-2 w25 btn-yellow mt-3"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#bidbtn_${listing.id}"
@@ -120,6 +120,7 @@ export function displayListings(listings, containerId) {
   for (let i = 0; i < listings.length; i++) {
     listingContainer.innerHTML += displayListing(listings[i]);
   }
+
 }
 
 export async function makeBid(event, id) {

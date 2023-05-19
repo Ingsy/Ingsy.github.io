@@ -90,14 +90,18 @@ h1 {
 
 .card-img-bid-small {
   max-width: 200px;
+  min-width: 200px;
   max-height: 200px;
+  min-height: 200px;
   margin: 15px;
   object-fit: cover;
 }
 .card-img-bid-big {
   border-radius: 15px;
   max-width: 300px;
-  max-height: 415px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
   margin: 15px;
   object-fit: cover;
 }
@@ -137,8 +141,9 @@ h1 {
   border-radius: 0px 80px;
   margin: 30px;
   border-color: none;
-  max-width: 400px;
-  min-height: 350px;
+  max-width: 380px;
+  min-height: 554px;
+  max-height: fit-content;
 }
 
 .description {
@@ -157,7 +162,7 @@ h1 {
   border-radius: 0px 80px;
   margin: 50px;
   max-width: 400px;
-  min-height: 500px;
+  max-height: fit-content;
 }
 
 .br-change {

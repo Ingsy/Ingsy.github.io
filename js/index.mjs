@@ -35,7 +35,6 @@ async function checkRouting() {
         if (storage.isLoggedIn()) {
             getProfileListings("#myListingsOnly")
             listeners.listingFeed();
-            listeners.setCreateListingFormListener("#createListing");
             listeners.setCreateListingFormListener("#createListingMobile");
             listeners.allListings();
             setLogOut();

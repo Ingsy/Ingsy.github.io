@@ -33,7 +33,7 @@ export async function displaySingleListing(listings, containerId) {
                 </div>
               <hr class="hr m-2" />
                 <div class="card-div m-3">
-                  <h3>Seller: ${listings[i].seller.name}</h3>
+                  <h3 class="me-2">Seller: ${listings[i].seller.name}</h3>
                   <h3>bidding ends: ${listings[i].endsAt.slice(0, 10)}</h3>
                 </div>`;
     if (listings[i].description) {
