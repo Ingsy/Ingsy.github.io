@@ -13,11 +13,8 @@ export async function register(profile) {
 
         const response = await fetch(registerURL, {
             headers: {
-                "content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+                "content-Type": "application/json"
             },
-            mode: 'cors',
             method,
             body
         })
@@ -26,7 +23,7 @@ export async function register(profile) {
         if (!response.ok) {
             alert("We could not register this account. Please try again")
         } else {
-            alert("You are now registered. Please log in to precede");
+            alert("You are now registered. Please log in to proceed");
             setTimeout(function () {
                 window.location.href = "/pages/login";
             }, 2500);
