@@ -20113,6 +20113,14 @@ textarea.form-control-lg {
   display: flexbox;
 }
 
+.nav-link {
+  color: #000000;
+}
+
+.nav-link.active {
+  font-size: 22px;
+}
+
 h3, .h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
