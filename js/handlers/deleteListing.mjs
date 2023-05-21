@@ -14,7 +14,7 @@ export async function deleteListing() {
 
             if (confirm(delConfirm)) {
                 await removeListing(delBtn[i].id);
-                window.location.reload();
+                window.location.href = "/";
             }
         });
     }

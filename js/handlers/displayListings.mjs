@@ -41,12 +41,15 @@ function displayListing(listing) {
         <div class="col" id="listItem_${listing.id}">
             <div class="card text-center mx-auto align-items-center">
             <h5 class="card-title mt-3 mb-0">${listing.title}</h5>
-            <div>
-            <img
-              src="${listing.media}"
+            <div>`;
+  if (listing.media && listing.media.length > 0) {
+    listingHTML += `<img
+              src="${listing.media[0]}"
               class="d-block card-img-bid-big"
               alt="Image of listing"
-            />
+            />`
+  }
+  listingHTML += `
           </div>
               <div class="card-body text-center">
               <div class="card-div2">

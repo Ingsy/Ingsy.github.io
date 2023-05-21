@@ -1,12 +1,11 @@
 import { displayBids } from "./displayListings.mjs";
 import { userName } from "../api/constants.mjs";
 import { BidOnListing } from "../listings/bid.mjs";
-//import { makeBid } from "./displayListings.mjs";
+import { deleteListing } from "./deleteListing.mjs";
 import { getListing } from "../listings/read.mjs";
 
 
 export function displayMedia(media) {
-  console.log(media);
   let mediaHtml = "";
   for (let i = 0; i < media.length && i < 3; i++) {
     const url = media[i];
@@ -122,5 +121,5 @@ export async function singleListing() {
   const id = url.searchParams.get("id");
   let listingData = await getListing(id);
   displaySingleListing([listingData], "#singleListing");
-
+  deleteListing();
 }

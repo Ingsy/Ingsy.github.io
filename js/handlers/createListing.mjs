@@ -9,8 +9,11 @@ export function setCreateListingFormListener(id) {
             const form = event.target;
             const formData = new FormData(form);
             const listing = Object.fromEntries(formData.entries());
-            listing.media = listing.media.split(",")
-
+            if (listing.media.length > 0) {
+                listing.media = listing.media.split(",");
+            } else {
+                listing.media = [];
+            }
             createListing(listing);
         });
     }
