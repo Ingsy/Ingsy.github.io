@@ -3,6 +3,7 @@ import { userName } from "../api/constants.mjs";
 import { BidOnListing } from "../listings/bid.mjs";
 import { deleteListing } from "./deleteListing.mjs";
 import { getListing } from "../listings/read.mjs";
+import { isLoggedIn } from "../storage/index.mjs";
 
 
 export function displayMedia(media) {
@@ -24,7 +25,7 @@ export async function displaySingleListing(listings, containerId) {
     listingHTML += `
 <div class="col-sm-12" id="listItem_${listings[i].id}">
             <div class="card card-single-listing mx-auto align-items-center">
-              <h5 class="card-title mt-3 mb-0">${listings[i].title}</h5>
+              <h5 class="card-title mt-3 mb-0 capitalize">${listings[i].title}</h5>
               <div class="card-body">
                 <div class ="row image-container">`;
     listingHTML += displayMedia(listings[i].media);
@@ -32,8 +33,8 @@ export async function displaySingleListing(listings, containerId) {
                 </div>
               <hr class="hr m-2" />
                 <div class="card-div m-3">
-                  <h3 class="me-2">Seller: ${listings[i].seller.name}</h3>
-                  <h3>bidding ends: ${listings[i].endsAt.slice(0, 10)}</h3>
+                  <h3 class="me-2">Seller: <span class="capitalize">${listings[i].seller.name}</span></h3>
+                  <h3>Bidding ends: ${listings[i].endsAt.slice(0, 10)}</h3>
                 </div>`;
     if (listings[i].description) {
       listingHTML += `
@@ -69,7 +70,7 @@ export async function displaySingleListing(listings, containerId) {
                 </div>
               </div>`;
     if (listings[i].seller.name === userName) {
-      listingHTML += `<button class="btn del-button" type="button" id="${listings[i].id}">delete</button>`;
+      listingHTML += `<button class="btn del-button" type="button" id="${listings[i].id}">Delete</button>`;
     }
     listingHTML += ` 
               
@@ -92,7 +93,7 @@ export async function displaySingleListing(listings, containerId) {
                   <label for="Bid" class="form-label"></label>
                   <input id="bidAmount_${listings[i].id}" type="number" name="Bid" class="form-control" placeholder="Place your Bid">
                 </div>
-                <button class="mt-3 btn btn-yellow" onclick="makeBid(event, '${listings[i].id}')">Place BID</button>
+                <button class="mt-3 btn btn-yellow" onclick="makeBidSingle(event, '${listings[i].id}')">Place BID</button>
               </form>
               </div>
               </div>
@@ -113,7 +114,7 @@ export async function makeBid(event, id) {
   return false;
 }
 
-window.makeBid = makeBid;
+window.makeBidSingle = makeBid;
 
 
 export async function singleListing() {
@@ -122,4 +123,9 @@ export async function singleListing() {
   let listingData = await getListing(id);
   displaySingleListing([listingData], "#singleListing");
   deleteListing();
+  if (isLoggedIn()) {
+    const element = document.querySelector("#toggleLogin");
+    element.text = "Logout";
+    localStorage.clear();
+  }
 }

@@ -22,7 +22,6 @@ async function checkRouting() {
 
     if (path.includes("profile")) {
         await initProfilePage();
-        listeners.deleteListing();
         return;
     }
 

@@ -21,8 +21,8 @@ export async function createListing(listingData) {
         if (!response.ok) {
             alert("Something went wrong! please check that you filled out the required inputs, and check that your image/s have a valid URL")
         } else {
-            alert("You just listed an Item!")
-
+            alert("You just listed an Item!");
+            window.location.reload();
         }
 
         return listing;

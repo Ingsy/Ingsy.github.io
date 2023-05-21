@@ -79,7 +79,7 @@
 
 h3 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
 }
 
@@ -272,4 +272,8 @@ textarea {
 .container {
   background-color: #312f2f;
   height: 100%;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }

@@ -41,22 +41,9 @@
                 <a class="nav-link active" aria-current="page" href="/pages/profile">My Profile</a>
               </li>
               <li class="nav-item">
-               <a class="nav-link" id="logout" href="/pages/login">log out</a>
+               <a class="nav-link" id="logout" href="/pages/login">Log out</a>
               </li>
               </ul>
-
-            <form class="d-flex" role="search" id="searchform">
-              <input
-                class="form-control input m-2"
-                id="searchInput"
-                type="text"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-secondary input m-2 me-4" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
@@ -102,7 +89,8 @@
                       type="url"
                       name="media"
                       class="form-control inputForm"
-                     
+                      pattern="https://.*"
+                      title="must be a valid url: eks: https://picsum.photos/200/300"
                       id="media"
                     />
                     <label for="media" class="form-label"
@@ -233,7 +221,7 @@
           <div class="card mx-auto text-center align-items-center yellow-2">
             <img src="" id="MyAvatar" class="card-img-profile" alt="Profile-Avatar" />
               <div class="card-body m-3">
-                <h2 class="mb-4" id="ProfileName"></h2>
+                <h2 class="mb-4 capitalize" id="ProfileName"></h2>
                 <h3 class="m-4" id="MyCredit"></h3>
                 <hr class="mt-4 mb-4" />
                 <div>
@@ -247,7 +235,7 @@
                     href="collapsetext"
                   >
                     
-                    edit avatar
+                    Edit avatar
                   </button>
             
                   <div class="collapse" id="edit-avatar-btn">

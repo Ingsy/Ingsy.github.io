@@ -45,6 +45,7 @@ export function setUpdateAvatarListener() {
 
             profileAPI.updateAvatar(avatar)
             alert("Your avatar is now updated!")
+            window.location.reload();
         })
     }
 }

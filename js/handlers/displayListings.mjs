@@ -40,7 +40,7 @@ function displayListing(listing) {
   listingHTML = `
         <div class="col" id="listItem_${listing.id}">
             <div class="card text-center mx-auto align-items-center">
-            <h5 class="card-title mt-3 mb-0">${listing.title}</h5>
+            <h5 class="card-title mt-3 mb-0 capitalize">${listing.title}</h5>
             <div>`;
   if (listing.media && listing.media.length > 0) {
     listingHTML += `<img
@@ -53,12 +53,12 @@ function displayListing(listing) {
           </div>
               <div class="card-body text-center">
               <div class="card-div2">
-                  <h3 class="me-3">${listing.seller.name}</h3>
-                  <h3>ends: ${listing.endsAt.slice(0, 10)}</h3>
+                  <h3 class="me-3 capitalize">${listing.seller.name}</h3>
+                  <h3>Ends: ${listing.endsAt.slice(0, 10)}</h3>
                 </div>
                 <hr class="mt-1 mb-2" />
                 <a class="btn" type="button" href="/single-listing.html?id=${listing.id}">
-                  view Listing
+                  View Listing
                 </a>
                 <button
                   class="btn"
@@ -84,11 +84,10 @@ function displayListing(listing) {
                   </div>
                 </div>`;
   if (listing.seller.name === userName) {
-    listingHTML += `<button class="btn del-button" type="button" id="${listing.id}">delete</button>`;
-  }
-  listingHTML += ` 
-                
-                
+    listingHTML += `<button class="btn del-button" type="button" id="${listing.id}">Delete</button>`;
+  } else {
+
+    listingHTML += ` 
                 <div>
                   <button
                   class="btn-2 w25 btn-yellow mt-3"
@@ -110,7 +109,9 @@ function displayListing(listing) {
                   <button class="mt-3 btn btn-yellow" onclick="makeBid(event, '${listing.id}')">Place BID</button>
                 </form>
                 </div>
-                </div>
+                </div>`;
+  }
+  listingHTML += `
               </div>
             </div>
           </div> `;
@@ -123,7 +124,7 @@ export function displayListings(listings, containerId) {
   for (let i = 0; i < listings.length; i++) {
     listingContainer.innerHTML += displayListing(listings[i]);
   }
-
+  deleteListing();
 }
 
 export async function makeBid(event, id) {
@@ -197,6 +198,4 @@ export async function listingFeed() {
 export async function allListings() {
   let listings = await getListings();
   displayListings(listings, "#listingsFeed");
-
-  deleteListing();
 }
