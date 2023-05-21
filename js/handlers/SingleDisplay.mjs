@@ -103,6 +103,7 @@ export async function displaySingleListing(listings, containerId) {
         </div> `;
     listingContainerSingle.innerHTML += listingHTML;
   }
+  deleteListing();
 }
 
 export async function makeBid(event, id) {
@@ -123,7 +124,6 @@ export async function singleListing() {
   const id = url.searchParams.get("id");
   let listingData = await getListing(id);
   displaySingleListing([listingData], "#singleListing");
-  deleteListing();
   if (isLoggedIn()) {
     const element = document.querySelector("#logout");
     element.text = "Logout";

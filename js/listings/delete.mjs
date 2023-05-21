@@ -15,7 +15,7 @@ export async function removeListing(id) {
         if (!response.ok) {
             throw new Error("Delete requires a listingID");
         } else {
-            alert("listing deleted")
+            alert("Listing deleted")
         }
 
 
