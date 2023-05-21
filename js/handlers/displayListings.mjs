@@ -146,6 +146,7 @@ export async function listingFeed() {
   const listings = await getListings();
   const activeListings = await getActiveListings();
   const endedListings = await getEndedListings();
+  let isShowingSearchResults = false;
 
   if (myListingsOnly) {
     const myListings = await getProfileListings();
@@ -171,6 +172,11 @@ export async function listingFeed() {
   });
 
   function doSearch(searchValue) {
+    if (searchValue.length === 0 && isShowingSearchResults) {
+      displayListings(listings, "#listingsFeed");
+      isShowingSearchResults = false;
+      return;
+    }
     const filteredSearch = listings.filter(function (listing) {
       if (listing.title.toLowerCase().includes(searchValue)) {
         return true;
@@ -183,19 +189,18 @@ export async function listingFeed() {
       }
       return false;
     });
-    displayListings(filteredSearch, "#listingsFeed");
+    searchForm.reset();
     if (filteredSearch.length === 0) {
       alert("No listings found");
+    } else {
+      isShowingSearchResults = true;
+      displayListings(filteredSearch, "#listingsFeed");
     }
-    searchInput.value = "";
   }
-
-  // onchange only fires when input not in focus
-  searchInput.onchange = (event) => doSearch(event.target.value.trim().toLowerCase());
   searchForm.onsubmit = (event) => {
     event.preventDefault();
-
-    doSearch(searchInput.value);
+    const value = searchInput.value.trim().toLowerCase();
+    doSearch(value);
     return false;
   }
 }
