@@ -1,5 +1,6 @@
 import { displayBids } from "./displayListings.mjs";
 import { userName } from "../api/constants.mjs";
+import { setLogOut } from "../api/auth/logout.mjs";
 import { BidOnListing } from "../listings/bid.mjs";
 import { deleteListing } from "./deleteListing.mjs";
 import { getListing } from "../listings/read.mjs";
@@ -124,8 +125,8 @@ export async function singleListing() {
   displaySingleListing([listingData], "#singleListing");
   deleteListing();
   if (isLoggedIn()) {
-    const element = document.querySelector("#toggleLogin");
+    const element = document.querySelector("#logout");
     element.text = "Logout";
-    localStorage.clear();
+    setLogOut();
   }
 }
