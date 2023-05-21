@@ -150,19 +150,23 @@ export async function listingFeed() {
   if (myListingsOnly) {
     const myListings = await getProfileListings();
     myListingsOnly.addEventListener("click", function () {
+      searchInput.value = "";
       displayListings(myListings, "#listingsFeed")
     });
   }
 
   listingsEnded.addEventListener("click", function () {
+    searchInput.value = "";
     displayListings(endedListings, "#listingsFeed")
   });
 
   listingsActive.addEventListener("click", function () {
+    searchInput.value = "";
     displayListings(activeListings, "#listingsFeed")
   });
 
   allListingsbtn.addEventListener("click", async function () {
+    searchInput.value = "";
     displayListings(listings, "#listingsFeed")
   });
 
@@ -191,6 +195,7 @@ export async function listingFeed() {
     event.preventDefault();
 
     doSearch(searchInput.value);
+    searchInput.value = "";
     return false;
   }
 }
