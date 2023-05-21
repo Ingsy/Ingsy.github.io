@@ -187,6 +187,7 @@ export async function listingFeed() {
     if (filteredSearch.length === 0) {
       alert("No listings found");
     }
+    searchInput.value = "";
   }
 
   // onchange only fires when input not in focus
@@ -195,7 +196,6 @@ export async function listingFeed() {
     event.preventDefault();
 
     doSearch(searchInput.value);
-    searchInput.value = "";
     return false;
   }
 }
