@@ -46,9 +46,9 @@ https://trello.com/invite/b/m4wabXdD/ATTI86c13d260f643e1ca004b8be31673e184DE90F1
 
 ## Gantt-Chart
 
-to access Gantt-chart: You can open it directly through the trello-link above on the righthand top called Gantt-chart Semester Project 2 or via placker-link.. Placker is a power-up in Trello witch provide Gantt-chart.
+to access Gantt-chart: You can open it directly through the trello-link above by choosing timeline
 
-https://placker.com/app#/gantt/view/sh8b9z7uz92io?e=b&s=p43232
+https://trello.com/b/m4wabXdD/semester-project-2/timeline
 
 ## Authors
 
