@@ -2,8 +2,7 @@
 
 https://github.com/Ingsy/SemesterProject2.git
 
-In this semester project we are making a auction Site for a client.
-The client has specified requirements in the form of User Stories. All API functionality is managed by an existing application.
+Bid- sell & buy is an auction website. A registered user may create, view, search and add a bid to other users listings. HTTP methods: POST, GET, PUT, and DELETE to enable CRUD operations. Static host: Build and deployed to github pages
 
 ## Logo
 
